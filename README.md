@@ -1,4 +1,5 @@
 # The DevSecOps Checklist
+# The DevSecOps-micron
 The intent of this project is to create an actionable list of things that any org, of any size, can do to implement a *functioning* DevSecOps program. And by "actionable" I mean specific things you can do on a server, in your source code or in a vendor that will materially influence the security of your web application. One of my biggest pet peeves with compliance frameworks is how disconnected they are from the actual things that technical people have to do to make something better.  Compliance frameworks like APRA234 in Australia or ISO27001 talk about theoretical or often non-sensical vulnerabilities.  This is often because the person or group of people writing the framework didn't know what they were talking about.  We want this DevSecOps Checklist to be different. 
 
 I was inspired by the recent [MVSP](https://mvsp.dev) project which I have profound respect for.  This document is NOT meant to replace that in any way.  Instead this is a separate document with a separate target audience and separate philosopy.  This document, unlike the MVSP, is meant to be the pentultimate checklist for implementing a DevSecOps program at your company.  This document is meant to provide a step by step guide on how to build better software by auditing whats in place now.
@@ -22,14 +23,14 @@ The developers laptop is where most of the magic happens, but also where most of
 
 | Name | Description | Difficulty | Maps to security frameworks |
 | :---        | :---   | :---    | :---    |
-| Secure Code Training | Implement a secure coding training program for your devs | <span style="color: orange">Medium</span> | <ul><li>SSDF1.1-PO.2.2</li><li>[NIST 800-53b SA-16](https://csrc.nist.gov/projects/risk-management/sp800-53-controls/release-search#!/control?version=5.1&number=SA-16)</li><li>APRA234 ATM B-2-f</li></ul> |
-| Versioning | Use a standard concurrent version system (CVS) like git in dev environments | <span style="color: green">Easy</span> | <ul><li>SSDF1.1-PO.3.1</li><li>APRA234 ATM B-2-f</li></ul> |
-| .gitignore | Limit what can be sent to repository via a .gitignore file | <span style="color: green">Easy</span> | <ul><li>SSDF1.1-PO.3.2</li><li>APRA234 ATM D-2-d-iii</li></ul> |
-| Git pre-commit hook | Utilize a pre-commit git hook to run security scans when code is commited | <span style="color: green">Easy</span> | <ul><li>APRA234</li><li>NIST</li></ul> |
-| Developer SCA | Scan source code for vulnerable libraries and open source software in dev environment | <span style="color: orange">Medium</span> | <ul><li>APRA234 ATM D-2-d-ii</li><li>NIST 800-53.2a</li></ul> |
-| Developer SAST | Scan source code for vulnerabilities in the source code itself in dev environment | <span style="color: green">Easy</span> | <ul><li>APRA234 ATM D-2-d-ii</li><li>[NIST 800-53.2b SA-11.1](https://csrc.nist.gov/projects/risk-management/sp800-53-controls/release-search#!/control?version=5.1&number=SA-11)</li></ul> |
-| Developer Credential | Scan source code for secrets, credentials, API keys and similar in dev environment | <span style="color: green">Easy</span> | <ul><li>APRA234 ATM D-2-ii</li><li>[NIST 800-53b SA-15.2](https://csrc.nist.gov/projects/risk-management/sp800-53-controls/release-search#!/control?version=5.1&number=SA-15)</li></ul> |
-| Baseline | Create an application baseline | <span style="color: orange">Medium</span> | <ul><li>APRA234 ATM D-2-ii</li><li>NIST</li></ul> |
+| Secure Code Training | Implement a secure coding training program for your devs | <span style="color: orange">Medium</span> | <ul><li>SSDF1.1-PO.2.2</li><li>[NIST 800-53B SA-16](https://csrc.nist.gov/projects/risk-management/sp800-53-controls/release-search#!/control?version=5.1&number=SA-16)</li><li>APRA234 ATM B-2-f</li></ul> |
+| Versioning | Use a standard concurrent version system (CVS) like git in dev environments | <span style="color: green">Easy</span> | <ul><li>SSDF1.1-PS.3.1</li><li>[NIST 800-53B SA-15(10)](https://csrc.nist.gov/projects/risk-management/sp800-53-controls/release-search#!/control?version=5.1&number=SA-15)</li><li>SSDF1.1-PO.3.1</li><li>APRA234 ATM B-2-f</li></ul> |
+| .gitignore | Limit what can be sent to repository via a .gitignore file | <span style="color: green">Easy</span> | <ul><li>SSDF1.1-PW.8.2</li><li>[NIST 800-53B SA-15(12)](https://csrc.nist.gov/projects/risk-management/sp800-53-controls/release-search#!/control?version=5.1&number=SA-15)</li><li>APRA234 ATM D-2-d-iii</li></ul> |
+| Git pre-commit hook | Utilize a pre-commit git hook to run security scans when code is commited | <span style="color: green">Easy</span> | <ul><li>SSDF1.1-PW.8.2</li><li>APRA234 ATM D-2-d-ii</li><li>[NIST 800-53B SA-11(1)](https://csrc.nist.gov/projects/risk-management/sp800-53-controls/release-search#!/control?version=5.1&number=SA-11)</li></ul> |
+| Developer SCA | Scan source code for vulnerable libraries and open source software in dev environment | <span style="color: orange">Medium</span> | <ul><li>APRA234 ATM D-2-d-ii</li><li>SSDF1.1-PW.8.2</li><li>[NIST 800-53B SA-15(7)](https://csrc.nist.gov/projects/risk-management/sp800-53-controls/release-search#!/control?version=5.1&number=SA-15)</li></ul> |
+| Developer SAST | Scan source code for vulnerabilities in the source code itself in dev environment | <span style="color: green">Easy</span> | <ul><li>APRA234 ATM D-2-d-ii</li><li>SSDF1.1-PW.8.2</li><li>[NIST 800-53B SA-11(1)](https://csrc.nist.gov/projects/risk-management/sp800-53-controls/release-search#!/control?version=5.1&number=SA-11)</li></ul> |
+| Developer Credential | Scan source code for secrets, credentials, API keys and similar in dev environment | <span style="color: green">Easy</span> | <ul><li>APRA234 ATM D-2-ii</li><li>SSDF1.1-PW.8.2</li><li>[NIST 800-53B SA-15(2)](https://csrc.nist.gov/projects/risk-management/sp800-53-controls/release-search#!/control?version=5.1&number=SA-15)</li></ul> |
+| Baseline | Create an application baseline | <span style="color: orange">Medium</span> | <ul><li>APRA234 ATM D-2-ii</li><li>APRA234 ATM D-2-d-ii</li><li>SSDF1.1-PW.9.1</li><li>[NIST 800-53B SA-17(1)](https://csrc.nist.gov/projects/risk-management/sp800-53-controls/release-search#!/control?version=5.1&number=SA-17)</li></ul> |
 
 <h2 id="scm">Source code management</h2>
 
@@ -37,14 +38,14 @@ Most companies now store their source code in cloud based repositories like GitH
 
 | Name | Description | Difficulty | Maps to security frameworks |
 | :---        | :---   | :---    | :--- |
-| SCM | Use a centralized source code management (SCM) system like Bitbucket, GitHub or Gitlab | <span style="color: green">Easy</span> | <ul><li>SSDF1.1-PO.3.1</li><li>APRA234 ATM B-2-f</li></ul> |
-| Roles | Create unique user and team roles so that access to source code can be tailored | <span style="color: green">Easy</span> | <ul><li>SSDF1.1-PS.1.1</li><li>APRA234 ATM B-2-f</li></ul> |
-| SSH | Use the SSH protocol to access your repositories instead of HTTPS | <span style="color: green">Easy</span> | <ul><li>APRA234 ATM D-4</li><li>NIST 800-53.2a</li></ul> |
-| MFA | Make sure all developers use multi-factor authentication when pulling, commiting or pushing code | <span style="color: green">Easy</span> | <ul><li>APRA234 ATM D-4</li><li>[NIST 800-53b AC-17](https://csrc.nist.gov/projects/risk-management/sp800-53-controls/release-search#!/control?version=5.1&number=AC-17)</li></ul> |
-| Server side git hook | Utilize a server side git hook like update or post-receive hook to run automatic scans | <span style="color: orange">Medium</span> | <ul><li>APRA234 ATM D-2-d-iii</li><li>NIST 800-53.2a</li></ul> |
-| Developer Collaboration | Use collaboration tools to document the changes to a software application | <span style="color: red">Difficult</span> | <ul><li>APRA234 ATM D</li><li>[NIST 800-53.2b SA-15.2](https://csrc.nist.gov/projects/risk-management/sp800-53-controls/release-search#!/control?version=5.1&number=SA-15)</li></ul> |
-| Pull Requests | Enforce pull or merge requests so all code is verified by team lead or senior engineer | <span style="color: orange">Medium</span> | <ul><li>APRA234 ATM D</li><li>NIST 800-53.2a</li></ul> |
-| Peer reviews | Enforce peer reviews by software engineers colleagues to increase code quality and security | <span style="color: orange">Medium</span> | <ul><li>APRA234 ATM G</li><li>NIST 800-53.2a</li></ul> |
+| SCM | Use a centralized source code management (SCM) system like Bitbucket, GitHub or Gitlab | <span style="color: green">Easy</span> | <ul><li>SSDF1.1-PS.1.1</li><li>[NIST 800-53B SA-15(6)](https://csrc.nist.gov/projects/risk-management/sp800-53-controls/release-search#!/control?version=5.1&number=SA-15)</li><li>APRA234 ATM B-2-f</li></ul> |
+| Roles | Create unique user and team roles so that access to source code can be tailored | <span style="color: green">Easy</span> | <ul><li>SSDF1.1-PO.2.1</li><li>[NIST 800-53B AC-2(7)](https://csrc.nist.gov/projects/risk-management/sp800-53-controls/release-search#!/control?version=5.1&number=AC-2)</li><li>APRA234 ATM B-2-f</li></ul> |
+| SSH | Use the SSH protocol to access your repositories instead of HTTPS | <span style="color: green">Easy</span> | <ul><li>SSDF1.1-PO.5.2</li><li>APRA234 ATM C.6b</li>[NIST 800-53B AC-17(4)](https://csrc.nist.gov/projects/risk-management/sp800-53-controls/release-search#!/control?version=5.1&number=AC-17)</li></ul> |
+| MFA | Make sure all developers use multi-factor authentication when pulling, commiting or pushing code | <span style="color: green">Easy</span> | <ul><li>SSDF1.1-PO.5.2</li><li>APRA234 ATM C.7j</li><li>[NIST 800-53B AC-17](https://csrc.nist.gov/projects/risk-management/sp800-53-controls/release-search#!/control?version=5.1&number=AC-17)</li></ul> |
+| Server side git hook | Utilize a server side git hook like update or post-receive hook to run automatic scans | <span style="color: orange">Medium</span> | <ul><li>SSDF1.1-PW.8.2</li><li>APRA234 ATM D-2-d-iii</li><li>APRA234 ATM D-2-d-ii</li><li>[NIST 800-53B SA-10(1)](https://csrc.nist.gov/projects/risk-management/sp800-53-controls/release-search#!/control?version=5.1&number=SA-10)</li></ul> |
+| Developer Collaboration | Use collaboration tools to document the changes to a software application | <span style="color: red">Difficult</span> | <ul><li>SSDF1.1-PW.8.2</li><li>APRA234 ATM D</li><li>[NIST 800-53B SA-15(2)](https://csrc.nist.gov/projects/risk-management/sp800-53-controls/release-search#!/control?version=5.1&number=SA-15)</li></ul> |
+| Pull Requests | Enforce pull or merge requests so all code is verified by team lead or senior engineer | <span style="color: orange">Medium</span> | <ul><li>APRA234 ATM D-2-d-ii</li><li>SSDF1.1-PO.3.3</li><li>[NIST 800-53B SA-15(3)](https://csrc.nist.gov/projects/risk-management/sp800-53-controls/release-search#!/control?version=5.1&number=SA-15)</li></ul> |
+| Peer reviews | Enforce peer reviews by software engineers colleagues to increase code quality and security | <span style="color: orange">Medium</span> | <ul><li>APRA234 ATM D-2-d-ii</li><li>SSDF1.1-PW.7.2</li><li>[NIST 800-53B SA-11(4)](https://csrc.nist.gov/projects/risk-management/sp800-53-controls/release-search#!/control?version=5.1&number=SA-11)</li></ul> |
 
 <h2 id="cicd">CI/CD Pipelines & Build Environments</h2>
 
@@ -53,10 +54,10 @@ Modern web applications are built using modern continuous integration and deploy
 | Name | Description | Difficulty | Maps to security frameworks |
 | :---        | :---   | :---    | :---    |
 | CI/CD pipeline | Implement a CI/CD pipeline | <span style="color: orange">Medium</span> | <ul><li>SSDF1.1-PO.5.1</li><li>APRA234 ATM D-2-d-iii</li></ul> |
-| Centralized SCA | Scan source code for vulnerable libraries and open source software from within a CD stage | <span style="color: green">Easy</span> | <ul><li>APRA234 ATM D-2-d-ii</li><li>NIST 800-53.2a</li></ul> |
-| Centralized SAST | Scan source code for vulnerabilities in the source code itself from within a CD stage | <span style="color: green">Easy</span> | <ul><li>APRA234 ATM D-2-d-ii</li><li>NIST 800-53.2a</li><li>[NIST 800-53.2b SA-11.1](https://csrc.nist.gov/projects/risk-management/sp800-53-controls/release-search#!/control?version=5.1&number=SA-11)</li></ul> |
-| Centralized Credential | Scan source code for secrets, credentials, API keys and similar from within a CD stage | <span style="color: green">Easy</span> | <ul><li>APRA234 ATM D-2-ii</li><li>[NIST 800-53b SA-15.2](https://csrc.nist.gov/projects/risk-management/sp800-53-controls/release-search#!/control?version=5.1&number=SA-15)</li></ul> |
-| DAST | Scan running application for vulnerabilities | <span style="color: orange">Medium</span> | <ul><li>APRA234</li><li>NIST 800-53b SA-15.7</li><li>[NIST 800-53b SA-11.8](https://csrc.nist.gov/projects/risk-management/sp800-53-controls/release-search#!/control?version=5.1&number=SA-11)</ul> |
+| Centralized SCA | Scan source code for vulnerable libraries and open source software from within a CD stage | <span style="color: green">Easy</span> | <ul><li>APRA234 ATM D-2-d-ii</li><li>SSDF1.1-PW.4.4</li><li>NIST 800-53.2a</li></ul> |
+| Centralized SAST | Scan source code for vulnerabilities in the source code itself from within a CD stage | <span style="color: green">Easy</span> | <ul><li>APRA234 ATM D-2-d-ii</li><li>SSDF1.1-PW.4.4</li><li>[NIST 800-53.2b SA-11.1](https://csrc.nist.gov/projects/risk-management/sp800-53-controls/release-search#!/control?version=5.1&number=SA-11)</li></ul> |
+| Centralized Credential | Scan source code for secrets, credentials, API keys and similar from within a CD stage | <span style="color: green">Easy</span> | <ul><li>APRA234 ATM D-2-ii</li><li>SSDF1.1-PW.5.1</li><li>[NIST 800-53B SA-15(2)](https://csrc.nist.gov/projects/risk-management/sp800-53-controls/release-search#!/control?version=5.1&number=SA-15)</li></ul> |
+| DAST | Scan running application for vulnerabilities | <span style="color: orange">Medium</span> | <ul><li>APRA234</li><li>SSDF1.1-PW.6.2</li><li>NIST 800-53B SA-15(7)</li><li>[NIST 800-53B SA-11(8)](https://csrc.nist.gov/projects/risk-management/sp800-53-controls/release-search#!/control?version=5.1&number=SA-11)</ul> |
 
 <h2 id="deployment">Deployment</h2>
 
@@ -64,17 +65,18 @@ Applications are deployed somewhere whether thats an AWS Lambda, S3 bucket or so
 
 | Name | Description | Difficulty | Maps to security frameworks |
 | :---        | :---   | :---    | :---    |
-| Encrypt Traffic | Encrypt all traffic that's public facing | <span style="color: orange">Medium</span> | <ul><li>APRA234 ATM E-1-a</li><li>[NIST 800-53b SC-8](https://csrc.nist.gov/projects/risk-management/sp800-53-controls/release-search#!/control?version=5.1&number=SA-8)</li></ul> |
-| HSTS | Enable HSTS in your webserver, load balancer or CDN | <span style="color: green">Easy</span> | <ul><li>APRA234</li><li>[NIST 800-53b SC-8](https://csrc.nist.gov/projects/risk-management/sp800-53-controls/release-search#!/control?version=5.1&number=SA-8)</li></ul> |
+| Encrypt Traffic | Encrypt all traffic that's public facing | <span style="color: orange">Medium</span> | <ul><li>APRA234 ATM E-1-a</li><li>[NIST 800-53B SC-8](https://csrc.nist.gov/projects/risk-management/sp800-53-controls/release-search#!/control?version=5.1&number=SA-8)</li></ul> |
+| HSTS | Enable HSTS in your webserver, load balancer or CDN | <span style="color: green">Easy</span> | <ul><li>APRA234</li><li>[NIST 800-53B SC-8](https://csrc.nist.gov/projects/risk-management/sp800-53-controls/release-search#!/control?version=5.1&number=SA-8)</li></ul> |
 | Current software | Use the most recent versions of application components, languages, frameworks and operating systems | <span style="color: red">Difficult</span> | <ul><li>APRA234 </li><li>NIST</li></ul> |
-| Alternative Deployment | Have tested and working altnerative way to deploy changes to your applicaiton other than using your standard process with GitHub or Bitbucket in case they go down. This must include the ability to push to PROD from local in emergencies. | <span style="color: red">Difficult</span> | <ul><li>APRA234</li><li>[NIST 800-53b SA-10.2](https://csrc.nist.gov/projects/risk-management/sp800-53-controls/release-search#!/control?version=5.1&number=SA-10)</li></ul> |
+| Alternative Deployment | Have tested and working altnerative way to deploy changes to your applicaiton other than using your standard process with GitHub or Bitbucket in case they go down. This must include the ability to push to PROD from local in emergencies. | <span style="color: red">Difficult</span> | <ul><li>[NIST 800-53B SA-10(2)](https://csrc.nist.gov/projects/risk-management/sp800-53-controls/release-search#!/control?version=5.1&number=SA-10)</li></ul> |
 | security.txt | Create a security.txt file in the root of your application so people know how to contact you about security issues | <span style="color: green">Easy</span> | <ul><li>APRA234</li><li>NIST</li></ul> |
-| X-Forwarded-By | Configure your webservers, load balancers & web proxies to include the X-Forwarded-By: header | <span style="color: green">Easy</span> | <ul><li>APRA234 ATM D-2-d-i</li><li>NIST 800-92.2.1.3</li></ul> |
-| Logging | Collect application logs in realtime and send to centralized storage or SIEM | <span style="color: orange">Medium</span> | <ul><li>APRA234 ATM D-2-d-i</li><li>NIST 800-92.2.3.2</li></ul> |
+| X-Forwarded-By | Configure your webservers, load balancers & web proxies to include the X-Forwarded-By: header | <span style="color: green">Easy</span> | <ul><li>APRA234 ATM D-2-d-i</li><li>[NIST 800-92.2.1.3](https://csrc.nist.gov/publications/detail/sp/800-92/final)</li></ul> |
+| Logging | Collect application logs in realtime and send to centralized storage or SIEM | <span style="color: orange">Medium</span> | <ul><li>APRA234 ATM D-2-d-i</li><li>SSDF1.1-PW.5.1</li><li>[NIST 800-92.2.3.2](https://csrc.nist.gov/publications/detail/sp/800-92/final)</li></ul> |
 | WAF | Implement a web application firewall (WAF) to protect your application from known attacks | <span style="color: orange">Medium</span> | <ul><li>APRA234 ATM D-2-d-iii</li><li>NIST 800-53.2a</li></ul> |
-| Harden Server | Configure hosting environment to be more secure | <span style="color: red">Difficult</span> | <ul><li>APRA234</li><li>NIST</li></ul> |
+| CDN | Use a content delivery network (CDN) whenever possible to add availability and security to you applications | <span style="color: orange">Medium</span> | <ul><li>APRA234 ATM D-2-d-iii</li><li>NIST 800-53.2a</li></ul> |
+| Harden Server | Configure hosting environment to be more secure | <span style="color: red">Difficult</span> | <ul><li>SSDF1.1-PO.5.2</li><li>NIST</li></ul> |
 | Encrypt Storage | Encrypt all filesystems, disks and cloud storage | <span style="color: orange">Medium</span> | <ul><li>APRA234</li><li>NIST 800-50b SC-28</li></ul> |
-| SBOM | Generate a **real-time** software bill-of-materials (SBOM) | <span style="color: orange">Medium</span> | <ul><li>APRA</li><li>[NIST 800-53b SA-17](https://csrc.nist.gov/projects/risk-management/sp800-53-controls/release-search#!/control?version=5.1&number=SA-17)</li></ul> |
+| SBOM | Generate a **real-time** software bill-of-materials (SBOM) | <span style="color: orange">Medium</span> | <ul><li>SSDF1.1-PS.3.2</li><li>[NIST 800-53B SA-17](https://csrc.nist.gov/projects/risk-management/sp800-53-controls/release-search#!/control?version=5.1&number=SA-17)</li></ul> |
 
 <h2 id="org">Organization</h2>
 
@@ -82,12 +84,35 @@ People don't deploy applications, organizations do.  Some steps in the DevSecOps
 
 | Name | Description | Difficulty | Maps to security frameworks |
 | :---        | :---   | :---    | :---    |
-| Pentesting | Have your application pentested regularly | <span style="color: orange">Medium</span> | <ul><li>APRA234</li><li>[NIST 800-53b SA-11.5](https://csrc.nist.gov/projects/risk-management/sp800-53-controls/release-search#!/control?version=5.1&number=SA-11)</li></ul> |
-| Attack Surface Management | Identify public facing resources via automation | <span style="color: orange">Medium</span> | <ul><li>APRA234</li><li>[NIST 800-53b SA-17.5](https://csrc.nist.gov/projects/risk-management/sp800-53-controls/release-search#!/control?version=5.1&number=SA-17)</li><li>[NIST 800-53b SA-11.6](https://csrc.nist.gov/projects/risk-management/sp800-53-controls/release-search#!/control?version=5.1&number=SA-11)</ul> |
+| Pentesting | Have your application pentested regularly | <span style="color: orange">Medium</span> | <ul><li>APRA234</li><li>[NIST 800-53B SA-11(5)](https://csrc.nist.gov/projects/risk-management/sp800-53-controls/release-search#!/control?version=5.1&number=SA-11)</li></ul> |
+| Threat-modeling | Build a collaborative way for developers and security staff to understand the threat landscape for an individual application | <span style="color: orange">Medium</span> | <ul><li>APRA234</li><li>[NIST 800-53B SA-11(2)](https://csrc.nist.gov/projects/risk-management/sp800-53-controls/release-search#!/control?version=5.1&number=SA-11)</li></ul> |
+| Attack Surface Management | Identify public facing resources via automation | <span style="color: orange">Medium</span> | <ul><li>APRA234</li><li>[NIST 800-53B SA-17(5)](https://csrc.nist.gov/projects/risk-management/sp800-53-controls/release-search#!/control?version=5.1&number=SA-17)</li><li>[NIST 800-53B SA-11(6)](https://csrc.nist.gov/projects/risk-management/sp800-53-controls/release-search#!/control?version=5.1&number=SA-11)</ul> |
 | Disclosure | Create a security.txt file as well as procedures to let people contact you when they find security issues in your app | <span style="color: green">Easy</span> | <ul><li>APRA234</li><li>NIST </li></ul> |
 | Bug Bounty | Setup a bug bounty program to incentivize security researchers to tell you about vulnerabilities they find | <span style="color: orange">Medium</span> | <ul><li>APRA234</li><li>NIST</li></ul> |
 
 ![DevSecOps Continuous Improvement](devsecops-controls.jpg)
+
+
+
+## Security Framework Reference Material  
+I am personally most experienced with the CIS set of controls as they are really prescriptive and I've implemented them in the past.  But I'm also interested in aligning with NIST 800, and Soc2 as we will have to tackle these both at SecureStack soon.  I had a number of friends suggest that I tackle APRA CPS 234 as well so you will see me attempt to map it as well when it makes sense.  This is a work in progress and once I've gotten a couple frameworks mapped I'll probably stop and let others take over.
+
+# NIST
+NIST Secure Software Development Framework (SSDF) version 1.1: https://csrc.nist.gov/publications/detail/sp/800-218/draft  
+
+NIST 800-53B (2021): https://csrc.nist.gov/publications/detail/sp/800-53b/final   
+1. [SA-11: Developer Testing and Evaluation](https://csrc.nist.gov/projects/risk-management/sp800-53-controls/release-search#!/control?version=5.1&number=SA-11)   
+2. [SA-15: Development Process, Standards, and Tools](https://csrc.nist.gov/projects/risk-management/sp800-53-controls/release-search#!/control?version=5.1&number=SA-15)  
+3. [SA-16: Developer-Provided Training](https://csrc.nist.gov/projects/risk-management/sp800-53-controls/release-search#!/control?version=5.1&number=SA-16) 
+4. [SA-17: Developer Security and Privacy Architecture and Design](https://csrc.nist.gov/projects/risk-management/sp800-53-controls/release-search#!/control?version=5.1&number=SA-17)  
+
+NIST 800-92: https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-92.pdf   
+NIST 800-95, Guide to Secure Web Services (2007): https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-95.pdf   
+
+# APRA
+APRA 234 ATM G:
+Design reviews, penetration tests, code review and scanning, network traffic analysis, fault testing, fuzzing 
+APRA 234: https://www.apra.gov.au/sites/default/files/cpg_234_information_security_june_2019_0.pdf   
 
 ## What's left to do?
 
@@ -112,23 +137,3 @@ People don't deploy applications, organizations do.  Some steps in the DevSecOps
 - Notifies you when one of your environments changes relative to the others (dev changes relative to prod)
 - Provides insights on how to add a missing security control to a specific application
 - Identifies when it’s easier to apply a security control in cloud provider rather than on your web service
-
-
-## Security Framework Reference Material  
-I am personally most experienced with the CIS set of controls as they are really prescriptive and I've implemented them in the past.  But I'm also interested in aligning with NIST 800, and Soc2 as we will have to tackle these both at SecureStack soon.  I had a number of friends suggest that I tackle APRA CPS 234 as well so you will see me attempt to map it as well when it makes sense.  This is a work in progress and once I've gotten a couple frameworks mapped I'll probably stop and let others take over.
-
-# NIST
-NIST 800-53b (2021): https://csrc.nist.gov/publications/detail/sp/800-53b/final   
-1. (SA-11) Developer Testing and Evaluation  
-2. (SA-15) Development Process, Standards, and Tools  
-3. (SA-16) Developer-Provided Training  
-4. (SA-17) Developer Security and Privacy Architecture and Design  
-
-NIST 800-92: https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-92.pdf   
-NIST 800-95, Guide to Secure Web Services (2007): https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-95.pdf   
-
-# APRA
-APRA 234 ATM G:
-Design reviews, penetration tests, code review and scanning, network traffic analysis, fault testing, fuzzing 
-APRA 234: https://www.apra.gov.au/sites/default/files/cpg_234_information_security_june_2019_0.pdf   
-
