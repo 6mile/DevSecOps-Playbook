@@ -20,16 +20,16 @@ Every company and every application is different and that means that simplistic 
 
 The developers laptop is where most of the magic happens, but also where most of the problems are introduced.  If you want to shift as far left as you can this is where you want to land much of your embedded security.
 
-| Name | Description | Maps to security frameworks |
-| :---        | :---   | :---    |
-| Secure Code Training | Implement a secure coding training program for your devs | <ul><li>SSDF1.1-PO.2.2</li><li>[NIST 800-53b SA-16](https://csrc.nist.gov/projects/risk-management/sp800-53-controls/release-search#!/control?version=5.1&number=SA-16)</li><li>APRA234 ATM B-2-f</li></ul> |
-| Versioning | Use a standard concurrent version system (CVS) like git in dev environments | <ul><li>SSDF1.1-PO.3.1</li><li>APRA234 ATM B-2-f</li></ul> |
-| .gitignore | Limit what can be sent to repository via a .gitignore file | <ul><li>SSDF1.1-PO.3.2</li><li>APRA234 ATM D-2-d-iii</li></ul> |
-| Git pre-commit hook | Utilize a pre-commit git hook to run security scans when code is commited | <ul><li>APRA234</li><li>NIST</li></ul> |
-| Developer SCA | Scan source code for vulnerable libraries and open source software in dev environment | <ul><li>APRA234 ATM D-2-d-ii</li><li>NIST 800-53.2a</li></ul> |
-| Developer SAST | Scan source code for vulnerabilities in the source code itself in dev environment | <ul><li>APRA234 ATM D-2-d-ii</li><li>[NIST 800-53.2b SA-11.1](https://csrc.nist.gov/projects/risk-management/sp800-53-controls/release-search#!/control?version=5.1&number=SA-11)</li></ul> |
-| Developer Credential | Scan source code for secrets, credentials, API keys and similar in dev environment | <ul><li>APRA234 ATM D-2-ii</li><li>[NIST 800-53b SA-15.2](https://csrc.nist.gov/projects/risk-management/sp800-53-controls/release-search#!/control?version=5.1&number=SA-15)</li></ul> |
-| Baseline | Create an application baseline | <ul><li>APRA234 ATM D-2-ii</li><li>NIST</li></ul> |
+| Name | Description | Difficulty | Maps to security frameworks |
+| :---        | :---   | :---    | :---    |
+| Secure Code Training | Implement a secure coding training program for your devs | <span style="color: orange">Medium</span> | <ul><li>SSDF1.1-PO.2.2</li><li>[NIST 800-53b SA-16](https://csrc.nist.gov/projects/risk-management/sp800-53-controls/release-search#!/control?version=5.1&number=SA-16)</li><li>APRA234 ATM B-2-f</li></ul> |
+| Versioning | Use a standard concurrent version system (CVS) like git in dev environments | <span style="color: green">Easy</span> | <ul><li>SSDF1.1-PO.3.1</li><li>APRA234 ATM B-2-f</li></ul> |
+| .gitignore | Limit what can be sent to repository via a .gitignore file | <span style="color: green">Easy</span> | <ul><li>SSDF1.1-PO.3.2</li><li>APRA234 ATM D-2-d-iii</li></ul> |
+| Git pre-commit hook | Utilize a pre-commit git hook to run security scans when code is commited | <span style="color: green">Easy</span> | <ul><li>APRA234</li><li>NIST</li></ul> |
+| Developer SCA | Scan source code for vulnerable libraries and open source software in dev environment | <span style="color: orange">Medium</span> | <ul><li>APRA234 ATM D-2-d-ii</li><li>NIST 800-53.2a</li></ul> |
+| Developer SAST | Scan source code for vulnerabilities in the source code itself in dev environment | <span style="color: green">Easy</span> | <ul><li>APRA234 ATM D-2-d-ii</li><li>[NIST 800-53.2b SA-11.1](https://csrc.nist.gov/projects/risk-management/sp800-53-controls/release-search#!/control?version=5.1&number=SA-11)</li></ul> |
+| Developer Credential | Scan source code for secrets, credentials, API keys and similar in dev environment | <span style="color: green">Easy</span> | <ul><li>APRA234 ATM D-2-ii</li><li>[NIST 800-53b SA-15.2](https://csrc.nist.gov/projects/risk-management/sp800-53-controls/release-search#!/control?version=5.1&number=SA-15)</li></ul> |
+| Baseline | Create an application baseline | <span style="color: orange">Medium</span> | <ul><li>APRA234 ATM D-2-ii</li><li>NIST</li></ul> |
 
 <h2 id="scm">Source code management</h2>
 
