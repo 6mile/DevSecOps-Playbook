@@ -77,6 +77,7 @@ Applications are deployed somewhere whether thats an AWS Lambda, S3 bucket or so
 | Harden Server | Configure hosting environment to be more secure | <span style="color: red">Difficult</span> | <ul><li>SSDF1.1-PO.5.2</li><li>NIST</li></ul> |
 | Encrypt Storage | Encrypt all filesystems, disks and cloud storage | <span style="color: orange">Medium</span> | <ul><li>APRA234</li><li>NIST 800-50b SC-28</li></ul> |
 | SBOM | Generate a **real-time** software bill-of-materials (SBOM) | <span style="color: orange">Medium</span> | <ul><li>SSDF1.1-PS.3.2</li><li>[NIST 800-53B SA-17](https://csrc.nist.gov/projects/risk-management/sp800-53-controls/release-search#!/control?version=5.1&number=SA-17)</li></ul> |
+| Monitor Application | Monitor your application in real-time so you know when its state changes for the worse (or better). This includes uptime, performance and security monitoring | <span style="color: orange">Medium</span> | <ul><li>[NIST 800-53B CA-7(5)](https://csrc.nist.gov/projects/risk-management/sp800-53-controls/release-search#!/control?version=5.1&number=CA-7)</li></ul> |
 
 <h2 id="org">Organization</h2>
 
