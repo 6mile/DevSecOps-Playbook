@@ -63,11 +63,13 @@ Applications are deployed somewhere whether thats an AWS Lambda, S3 bucket or so
 
 | Name | Description | Maps to security frameworks |
 | :---        | :---   | :---    |
+| Alternative Deployment | Have tested and working altnerative way to deploy changes to your applicaiton other than using your standard process with GitHub or Bitbucket in case they go down. This must include the ability to push to PROD from local in emergencies. | <ul><li>APRA23 example</li><li>NIST example</li></ul> |
 | security.txt | Create a security.txt file in the root of your application so people know how to contact you about security issues | <ul><li>APRA23 example</li><li>NIST example</li></ul> |
+| X-Forwarded-By | Configure your webservers, load balancers & web proxies to include the X-Forwarded-By header | <ul><li>APRA23 example</li><li>NIST example</li></ul> |
 | Logging | Collect application logs in realtime and send to centralized storage or SIEM | <ul><li>APRA23 ATM D-2-d-i</li><li>NIST example</li></ul> |
 | WAF | Implement a web application firewall (WAF) to protect your application from known attacks | <ul><li>APRA234 ATM D-2-d-iii</li><li>NIST 800-53.2a</li></ul> |
 | Harden Server | Configure hosting environment to be more secure | <ul><li>APRA23 example</li><li>NIST example</li></ul> |
-| SBOM | Generate a software bill-of-materials (SBOM) | <ul><li>APRA</li><li>NIST</li></ul> |
+| SBOM | Generate a **real-time** software bill-of-materials (SBOM) | <ul><li>APRA</li><li>NIST</li></ul> |
 
 <h2 id="org">Organization</h2>
 
@@ -81,28 +83,31 @@ People don't deploy applications, organizations do.  Some steps in the DevSecOps
 
 ![DevSecOps Continuous Improvement](devsecops-controls.jpg)
 
-## Whats left to do?
+## What's left to do?
 
-- [ ] vulnerability assessment
+- [x] vulnerability assessment
+- [ ] map all the APRA and NIST examples
 
 
-  Identifies missing HTTP security headers
-  Identifies whether appropriate security controls like WAF, firewalls, and CSP are being used
-  Identifies vulnerabilities in your web application and public assets
-  Identifies mis-configured WAF or CDN
-  Finds WAF bypass attacks for Akamai, Cloudflare & Imperva
-  Identifies sovereignty issues for your data or transit
-  Identifies SSL/TLS misconfigurations
-  Finds loadbalancing, proxy or reverse-proxy issues
-  Identifies insecure or out of date dependencies in your public assets
-  Identifies security and availability differences in your dev, staging and prod environments
-  Track all changes to the security, techstack and availability profiles of your application environments
-  Let's you schedule daily, weekly or monthly scans
-  Provides historical data on your applications via API or web UI
-  Notifies you when your application changes for the worse
-  Notifies you when one of your environments changes relative to the others (dev changes relative to prod)
-  Provides insights on how to add a missing security control to a specific application
-  Identifies when it’s easier to apply a security control in cloud provider rather than on your web service
+
+
+- Identifies missing HTTP security headers
+- Identifies whether appropriate security controls like WAF, firewalls, and CSP are being used
+- Identifies vulnerabilities in your web application and public assets
+- Identifies mis-configured WAF or CDN
+- Finds WAF bypass attacks for Akamai, Cloudflare & Imperva
+- Identifies sovereignty issues for your data or transit
+- Identifies SSL/TLS misconfigurations
+- Finds loadbalancing, proxy or reverse-proxy issues
+- Identifies insecure or out of date dependencies in your public assets
+- Identifies security and availability differences in your dev, staging and prod environments
+- Track all changes to the security, techstack and availability profiles of your application environments
+- Let's you schedule daily, weekly or monthly scans
+- Provides historical data on your applications via API or web UI
+- Notifies you when your application changes for the worse
+- Notifies you when one of your environments changes relative to the others (dev changes relative to prod)
+- Provides insights on how to add a missing security control to a specific application
+- Identifies when it’s easier to apply a security control in cloud provider rather than on your web service
 
 APRA 234 ATM G:
 Design reviews, penetration tests, code review and scanning, network traffic analysis, fault testing, fuzzing 
