@@ -100,8 +100,6 @@ People don't deploy applications, organizations do.  Some steps in the DevSecOps
 
 ![DevSecOps Continuous Improvement](devsecops-controls.jpg)
 
-
-
 ## Security Framework Reference Material  
 I am personally most experienced with the CIS set of controls as they are really prescriptive and I've implemented them in the past.  But I'm also interested in aligning with NIST 800, and Soc2 as we will have to tackle these both at SecureStack soon.  I had a number of friends suggest that I tackle APRA CPS 234 as well so you will see me attempt to map it as well when it makes sense.  This is a work in progress and once I've gotten a couple frameworks mapped I'll probably stop and let others take over.
 
@@ -127,21 +125,3 @@ APRA 234: https://www.apra.gov.au/sites/default/files/cpg_234_information_securi
 - [x] vulnerability assessment
 - [ ] map all the APRA and NIST examples
 
-
-- Identifies missing HTTP security headers
-- Identifies whether appropriate security controls like WAF, firewalls, and CSP are being used
-- Identifies vulnerabilities in your web application and public assets
-- Identifies mis-configured WAF or CDN
-- Finds WAF bypass attacks for Akamai, Cloudflare & Imperva
-- Identifies sovereignty issues for your data or transit
-- Identifies SSL/TLS misconfigurations
-- Finds loadbalancing, proxy or reverse-proxy issues
-- Identifies insecure or out of date dependencies in your public assets
-- Identifies security and availability differences in your dev, staging and prod environments
-- Track all changes to the security, techstack and availability profiles of your application environments
-- Let's you schedule daily, weekly or monthly scans
-- Provides historical data on your applications via API or web UI
-- Notifies you when your application changes for the worse
-- Notifies you when one of your environments changes relative to the others (dev changes relative to prod)
-- Provides insights on how to add a missing security control to a specific application
-- Identifies when it’s easier to apply a security control in cloud provider rather than on your web service
