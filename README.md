@@ -11,7 +11,7 @@ I was inspired by the recent [MVSP](https://mvsp.dev) project which I have profo
 
 Every company and every application is different and that means that simplistic statements like "shift left" need to be clarified.  For many large companies, managers find it difficult to enforce security precautions on the developers laptop like the use of MFA or git hooks.  For this company, it is best to shift left to the CI/CD solution(s) and concentrate initially there.  For smaller startups or companies with immature or non-existant CI/CD pipelines it is easier to shift left all the way to the developers laptop.  If you can define what secure looks like at this early stage, you are saving time and money.  For other organizations, it is a combination, depending on group and maturity, and this is all perfectly fine.  The intent of this document is to provide a roadmap to DevSecOps nirvana and not to say what is the best journey to nirvana.  The journey is yours.  
 
-This checklist is broken down into five areas of concern which will often map to different technocal roles within an org:
+This checklist is broken down into five areas of concern which will often map to different technical roles within an org:
 
 * [Development environment](#development)  
 * [Source code management](#scm)  
