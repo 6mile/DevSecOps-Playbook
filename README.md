@@ -1,13 +1,13 @@
-# The DevSecOps Checklist
-The intent of this project is to create an actionable list of things that any org, of any size, can do to implement a *functioning* DevSecOps program. Or more simply: this project is meant to be a list of actionable steps that engineers can follow that will give them a better, more secure application in the ned.  And by "actionable" I mean specific things you can do on a server, in your source code or in a vendor platform that will materially influence the security of your web application. 
+# The DevSecOps Omnibus Checklist - Version 1.0
+The intent of this project is to create an actionable list of things that any org, of any size, can do to implement a *functioning* DevSecOps program across an estate of applications. Or put more simply: this project is meant to be a list of actionable steps that engineers can follow that will give them a better, more secure application in the ned.  And by "actionable" I mean specific things you can do on a server, in your source code or in a vendor platform that will materially influence the security of your web application. 
 
-# Some background
+## Some background
 
 I have been hardening applications environments for more than 20 years and one of my biggest frustrations is how abstracted the language of compliance frameworks are.  They are too disconnected from the actual technical things that technical people have to do to make something better.  Following compliance guidelines is really important but frameworks like the NIST Secure Software Development Framework (SSDF) talk about theoretical or often non-sensical vulnerabilities.  For example, here's a line from the SSDF section PO item 3.2: "Follow recommended security practices to deploy and maintain tools and toolchains."  Then in the implementation examples section there are 9 examples that range from evaluating tools and acquiring tools for the developer environment to collecting evidence for an audit. Like, WTF?!  How is an engineer supposed to know what to do with that?  This is often because the person or group of people writing the framework are technically aligned becasue they come from a risk or GRC background.  We want this DevSecOps Checklist to be different. This document is for engineers!
 
 I was inspired by the recent [MVSP](https://mvsp.dev) project which I have profound respect for.  But, the MVSP is a framework for defining what a minimally viable secure product is, and not a true checklist of "do this, now do that". This document is NOT meant to replace the MVSP in any way.  Instead this is a separate document with a separate target audience and separate philosopy.  This document, unlike the MVSP, is meant to be the pentultimate checklist for implementing a DevSecOps program at your company.  This document is meant to provide a step by step guide on how to build better software by auditing whats in place now. Finally, I'm selfish and I want a document I can use myself to quickly and efficiently secure an estate of applications.
 
-# Shift Left
+## Shift Left
 
 Every company and every application is different and that means that simplistic statements like "shift left" need to be clarified.  For many large companies, managers find it difficult to enforce security precautions on the developers laptop like the use of MFA or git hooks.  For this company, it is best to shift left to the CI/CD solution(s) and concentrate initially there.  For smaller startups or companies with immature or non-existant CI/CD pipelines it is easier to shift left all the way to the developers laptop.  If you can define what secure looks like at this early stage, you are saving time and money.  For other organizations, it is a combination, depending on group and maturity, and this is all perfectly fine.  The intent of this document is to provide a roadmap to DevSecOps nirvana and not to say what is the best journey to nirvana.  The journey is yours.  
 
@@ -100,12 +100,14 @@ People don't deploy applications, organizations do.  Some steps in the DevSecOps
 
 ![DevSecOps Continuous Improvement](devsecops-controls.jpg)
 
-## Security Framework Reference Material  
-I am personally most experienced with the CIS set of controls as they are really prescriptive and I've implemented them in the past.  But I'm also interested in aligning with NIST 800, and Soc2 as we will have to tackle these both at SecureStack soon.  I had a number of friends suggest that I tackle APRA CPS 234 as well so you will see me attempt to map it as well when it makes sense.  This is a work in progress and once I've gotten a couple frameworks mapped I'll probably stop and let others take over.
 
-# NIST
+# Security Framework Reference Material  
+Below you will find links to several security frameworks that align with this document.  I have personally spent many years implementing CIS controls into my application environments.  CIS is a wonderful framework as its very presciptive and easy for an engineer to understand.  This is not to say that CIS controls are easy to implement.  They are not!  Regardless, you can't deny the ubiquity of ISO27001 and SOC2 and I want this document to help orgs looking to meet those requirements as well.  In fact, SecureStack has started a SOC2 program and in parallel to writing this document I am busily mapping SOC2 requirements and will eventually add them to this document.  I had a number of Australian friends suggest that I tackle APRA CPS 234 as well so you will see me attempt to map it as well when it makes sense.  This is a work in progress and I encourage anyone that is interested to jump in and suggest mappings.  You can add an issue in GitHub or simply create a PR.
+
+## NIST SSDF
 NIST Secure Software Development Framework (SSDF) version 1.1: https://csrc.nist.gov/publications/detail/sp/800-218/draft  
 
+## NIST 800
 NIST 800-53B (2021): https://csrc.nist.gov/publications/detail/sp/800-53b/final   
 1. [SA-11: Developer Testing and Evaluation](https://csrc.nist.gov/projects/risk-management/sp800-53-controls/release-search#!/control?version=5.1&number=SA-11)   
 2. [SA-15: Development Process, Standards, and Tools](https://csrc.nist.gov/projects/risk-management/sp800-53-controls/release-search#!/control?version=5.1&number=SA-15)  
@@ -113,14 +115,12 @@ NIST 800-53B (2021): https://csrc.nist.gov/publications/detail/sp/800-53b/final
 4. [SA-17: Developer Security and Privacy Architecture and Design](https://csrc.nist.gov/projects/risk-management/sp800-53-controls/release-search#!/control?version=5.1&number=SA-17)  
 
 NIST 800-92: https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-92.pdf   
-NIST 800-95, Guide to Secure Web Services (2007): https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-95.pdf   
+NIST 800-95: Guide to Secure Web Services (2007): https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-95.pdf   
 
-# APRA
-APRA 234 ATM G:
-Design reviews, penetration tests, code review and scanning, network traffic analysis, fault testing, fuzzing 
-APRA 234: https://www.apra.gov.au/sites/default/files/cpg_234_information_security_june_2019_0.pdf   
+## APRA CPG 234
+APRA 234 ATM G:  Design reviews, penetration tests, code review and scanning, network traffic analysis, fault testing, fuzzing - https://www.apra.gov.au/sites/default/files/cpg_234_information_security_june_2019_0.pdf   
 
-## What's left to do?
+# What's left to do?
 
 - [x] vulnerability assessment
 - [ ] map all the APRA and NIST examples
