@@ -177,3 +177,5 @@ This document is organized in an unusual way with 8 "attachments" at the end of 
 - [ ] map CIS section other than 16 to all items
 - [ ] map remaining NIST 800-53
 - [ ] map remaining ISM infrastructure
+
+Sponsored with 💜  by [SecureStack](https://securestack.com)
