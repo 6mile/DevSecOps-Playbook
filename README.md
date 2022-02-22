@@ -57,9 +57,7 @@ Most companies now store their source code in cloud based repositories like GitH
 | Source Code Management | 1 | Use a centralized source code management (SCM) system like Bitbucket, GitHub or Gitlab | <span style="color: green">Easy</span> | <ul><li>APRA234</li><li>CIS8</li><li>ISM GSD</li><li>ISO27001</li><li>NIST 800-53B</li><li>SSDF1.1</li></ul> |
 | User Roles | 1 | Create unique user and team roles so that access to source code can be tailored | <span style="color: green">Easy</span> | <ul><li>APRA234</li><li>CIS8</li><li>ISM GSD</li><li>NIST 800-53B</li><li>SSDF1.1</li></ul> |
 | SSH | 2 | Use the SSH protocol to access your repositories instead of HTTPS | <span style="color: green">Easy</span> | <ul><li>APRA234</li><li>CIS8</li><li>ISM GSD</li><li>NIST 800-53B</li><li>SSDF1.1</li></ul> |
-| Multi-Factor Authentication | 1 | Make sure all developers use multi-factor authentication (MFA) when pulling, commiting or pushing code. This is especially important if you use company email as your login for SCM
-> UK: Oh boy, really? what about git over ssh or app password with limited permissions.
-| <span style="color: green">Easy</span> | <ul><li>APRA234</li><li>CIS8</li><li>ISM GSD</li><li>NIST 800-53B</li><li>SSDF1.1</li></ul> |
+| Multi-Factor Authentication | 1 | Make sure all developers use multi-factor authentication (MFA) when pulling, commiting or pushing code. This is especially important if you use company email as your login for SCM <br> UK: Oh boy, really? I would find that super-annoying | <span style="color: green">Easy</span> | <ul><li>APRA234</li><li>CIS8</li><li>ISM GSD</li><li>NIST 800-53B</li><li>SSDF1.1</li></ul> |
 | Server side git hook | 3 | Utilize a server side git hook like update or post-receive hook to run automatic scans | <span style="color: orange">Medium</span> | <ul><li>APRA234</li><li>CIS8</li><li>NIST 800-53B</li><li>SSDF1.1</li></ul> |
 | Developer Collaboration | 2 | Use collaboration tools to document the changes to a software application | <span style="color: red">Difficult</span> | <ul><li>APRA234</li><li>CIS8</li><li>NIST 800-53B</li><li>SSDF1.1</li></ul> |
 | Pull Requests | 1 | Enforce pull or merge requests so all code is verified by team lead or senior engineer | <span style="color: green">Easy</span> | <ul><li>APRA234</li><li>CIS8</li><li>ISO27001</li><li>NIST 800-53B</li><li>SSDF1.1</li></ul> |
@@ -83,7 +81,7 @@ Modern web applications are built using modern continuous integration and deploy
 
 <h2 id="deployment">Deployment</h2>
 
-Applications are deployed somewhere whether thats an AWS Lambda, S3 bucket or some old crusty server in the corner of the server room.  In any case, DevSecOps best practices mean that you need to include that deployment location in your processes.  
+Applications are deployed somewhere whether that's an AWS Lambda, S3 bucket or some old crusty server in the corner of the server room.  In any case, DevSecOps best practices mean that you need to include that deployment location in your processes.  
 
 | Name | Priority | Description | Difficulty | Maps to security frameworks |
 | :---        | :---   | :--- | :---    | :---    |
@@ -123,7 +121,7 @@ People don't deploy applications, organizations do.  Some steps in the DevSecOps
 
 <h2 id="compliance">Compliance - Security Framework Reference Material</h2> 
 
-Because this is meant to be a manifesto about how to do DevSecOps, we have to be cognizant that there are three groups of people that this affects: Developers, Operations and InfoSec.  Historically, there are many compliance frameworks that address the InfoSec community and to a lessor extent Operations teams.  But software development was never mentioned until only recently.  Understanding this, I wanted to note there are only really 3 frameworks that address the software development part of DevSecOps:
+Because this is meant to be a manifesto about how to do DevSecOps, we have to be cognizant that there are three groups of people that this effects: Developers, Operations and InfoSec.  Historically, there are many compliance frameworks that address the InfoSec community and to a lesser extent Operations teams.  But software development was never mentioned until only recently.  Understanding this, I wanted to note there are only really 3 frameworks that address the software development part of DevSecOps:
 
 * NIST 800 SA 10, 11, 15, 16 and 17
 * CIS Section 16
