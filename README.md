@@ -1,18 +1,20 @@
-# The DevSecOps Omnibus Checklist - Version 1.0
+# The DevSecOps Omnibus Playbook - Version 1.0
 The intent of this project is to create an actionable list of things that any org, of any size, can do to implement a *functioning* DevSecOps program across an estate of applications. Or put more simply: this project is meant to be a list of actionable steps that engineers can follow that will give them a better, more secure application.  And by "actionable" I mean specific things you can do on a server, in your source code or in a vendor platform that will materially influence the security of your web application. 
 
 ## Some background
 
-I have been hardening applications environments for more than 20 years and one of my biggest frustrations is how abstracted the language of compliance frameworks are.  They are too disconnected from the actual technical things that technical people have to do to make something better.  Following compliance guidelines is really important but frameworks like the NIST Secure Software Development Framework (SSDF) talk about theoretical or often non-sensical vulnerabilities.  For example, here's a line from the SSDF section PO item 3.2: "Follow recommended security practices to deploy and maintain tools and toolchains."  Then in the implementation examples section there are 9 examples that range from evaluating tools and acquiring tools for the developer environment to collecting evidence for an audit. Like, WTF?!  How is an engineer supposed to know what to do with that?  This is often because the person or group of people writing the framework are technically aligned becasue they come from a risk or GRC background.  We want this DevSecOps Checklist to be different. This document is for engineers!
+I've been helping software engineering teams build and deploy more secure applications for over 20 years now.  I wrote my first hardening document in 2002 for a large insurance company in the US.  When I was writing that document there wasn't much information available on the internet about how to secure application environments.  What little there was (PCI checklists mostly) was very high-level and super frustrating for an engineer who wants specific tasks that they do and say "I did that thing!".  But, here's the thing, as much as I personally hate many "compliance" frameworks, I've come to appreciate them simply because they give you something to test against.  It's the way you show that "hey! I'm getting better at this!"
 
-I was inspired by the recent [MVSP](https://mvsp.dev) project which I have profound respect for.  But, the MVSP is a framework for defining what a minimally viable secure product is, and not a true checklist of "do this, now do that". This document is NOT meant to replace the MVSP in any way.  Instead this is a separate document with a separate target audience and separate philosophy.  This document, unlike the MVSP, is meant to be the pentultimate checklist for implementing a DevSecOps program at your company.  This document is meant to provide a step by step guide on how to build better software by auditing whats in place now. Finally, I'm selfish and I want a document I can use myself to quickly and efficiently secure an estate of applications.
+Unfortunately, most compliance frameworks are disconnected from the actual technical things that technical people have to do to make something better.  Following compliance guidelines is really important but frameworks like the NIST Secure Software Development Framework (SSDF) talk about theoretical or often non-sensical vulnerabilities.  For example, here's a line from the SSDF section PO item 3.2: "Follow recommended security practices to deploy and maintain tools and toolchains."  Then in the implementation examples section there are 9 examples that range from evaluating tools and acquiring tools for the developer environment to collecting evidence for an audit. Like, WTF?!  How is an engineer supposed to know what to do with that?  This is often because the person or group of people writing the framework are technically aligned becasue they come from a risk or GRC background.  We want this DevSecOps Playbook to be different. This document is for engineers!
+
+I was inspired by the recent [MVSP](https://mvsp.dev) project which I have profound respect for.  But, the MVSP is a framework for defining what a minimally viable secure product is, and not a true checklist of "do this, now do that". This document is NOT meant to replace the MVSP in any way.  Instead this is a separate document with a separate target audience and separate philosophy.  This document, unlike the MVSP, is meant to be the pentultimate playbook for implementing a DevSecOps program at your company.  This document is meant to provide a step by step guide on how to build better software by auditing whats in place now. Finally, I'm selfish and I want a document I can use myself to quickly and efficiently secure an estate of applications.
 
 
 ## Shift Left
 
 Every company and every application is different and that means that simplistic statements like "shift left" need to be clarified.  For many large companies, managers find it difficult to enforce security precautions on the developers laptop like the use of MFA or git hooks.  For this company, it is best to shift left to the CI/CD solution(s) and concentrate initially there.  For smaller startups or companies with immature or non-existant CI/CD pipelines it is easier to shift left all the way to the developers laptop.  If you can define what secure looks like at this early stage, you are saving time and money.  For other organizations, it is a combination, depending on group and maturity, and this is all perfectly fine.  The intent of this document is to provide a roadmap to DevSecOps nirvana and not to say what is the best journey to nirvana.  The journey is yours.  
 
-This checklist is broken down into five areas of concern which will often map to different technical roles within an org:
+This playbook is broken down into five areas of concern which will often map to different technical roles within an org:
 
 * [Development environment](#development)  
 * [Source code management](#scm)  
@@ -23,13 +25,13 @@ This checklist is broken down into five areas of concern which will often map to
 
 ## Priority and Difficulty explained
 
-We use two rating systems in the checklist.  The first rating system is "Priority" and has three levels: 1, 2 and 3.  These levels are meant to impart to the developer which things they should do first, what the should do second, and which things they should do last, or third.
+We use two rating systems in this playbook.  The first rating system is "Priority" and has three levels: 1, 2 and 3.  These levels are meant to impart to the developer which things they should do first, what the should do second, and which things they should do last, or third.
 
 The second rating system is "Difficulty" and is meant to impart how hard it is to implement this control or function.  This system uses three labels "Easy", "Medium" and finally the hardest "Difficult".  
 
 ![DevSecOps Continuous Improvement](devsecops-infinity.png)
 
-# The Checklist
+# The Playbook
 
 <h2 id="development">The developers environment</h2>
 
@@ -102,7 +104,7 @@ Applications are deployed somewhere whether thats an AWS Lambda, S3 bucket or so
 
 <h2 id="org">Organization</h2>
 
-People don't deploy applications, organizations do.  Some steps in the DevSecOps checklist need to be owned by the Organization itself.  
+People don't deploy applications, organizations do.  Some steps in the DevSecOps playbook need to be owned by the Organization itself.  
 
 | Name | Priority | Description | Difficulty | Maps to security frameworks |
 | :---        | :---   | :--- | :---    | :---    |
