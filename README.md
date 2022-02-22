@@ -5,7 +5,7 @@ The intent of this project is to create an actionable list of things that any or
 
 I have been hardening applications environments for more than 20 years and one of my biggest frustrations is how abstracted the language of compliance frameworks are.  They are too disconnected from the actual technical things that technical people have to do to make something better.  Following compliance guidelines is really important but frameworks like the NIST Secure Software Development Framework (SSDF) talk about theoretical or often non-sensical vulnerabilities.  For example, here's a line from the SSDF section PO item 3.2: "Follow recommended security practices to deploy and maintain tools and toolchains."  Then in the implementation examples section there are 9 examples that range from evaluating tools and acquiring tools for the developer environment to collecting evidence for an audit. Like, WTF?!  How is an engineer supposed to know what to do with that?  This is often because the person or group of people writing the framework are technically aligned becasue they come from a risk or GRC background.  We want this DevSecOps Checklist to be different. This document is for engineers!
 
-I was inspired by the recent [MVSP](https://mvsp.dev) project which I have profound respect for.  But, the MVSP is a framework for defining what a minimally viable secure product is, and not a true checklist of "do this, now do that". This document is NOT meant to replace the MVSP in any way.  Instead this is a separate document with a separate target audience and separate philosopy.  This document, unlike the MVSP, is meant to be the pentultimate checklist for implementing a DevSecOps program at your company.  This document is meant to provide a step by step guide on how to build better software by auditing whats in place now. Finally, I'm selfish and I want a document I can use myself to quickly and efficiently secure an estate of applications.
+I was inspired by the recent [MVSP](https://mvsp.dev) project which I have profound respect for.  But, the MVSP is a framework for defining what a minimally viable secure product is, and not a true checklist of "do this, now do that". This document is NOT meant to replace the MVSP in any way.  Instead this is a separate document with a separate target audience and separate philosophy.  This document, unlike the MVSP, is meant to be the pentultimate checklist for implementing a DevSecOps program at your company.  This document is meant to provide a step by step guide on how to build better software by auditing whats in place now. Finally, I'm selfish and I want a document I can use myself to quickly and efficiently secure an estate of applications.
 
 
 ## Shift Left
@@ -118,9 +118,10 @@ People don't deploy applications, organizations do.  Some steps in the DevSecOps
 
 <h2 id="compliance">Compliance - Security Framework Reference Material</h2> 
 
-Because this is meant to be a manifesto about how to do DevSecOps, we have to be cognizant that there are three groups of people that this affects: Developers, Operations and InfoSec.  Historically, there are many compliance frameworks that address the InfoSec community and to a lessor extent Operations teams.  But software development was never mentioned until only recently.  Understanding this, I wanted to note there are only really 3 frameworks that address the software development part of DevSecOps:
+Because this is meant to be a manifesto about how to do DevSecOps, we have to be cognizant that there are three groups of people that this affects: Developers, Operations and InfoSec.  Historically, there are many compliance frameworks that address the InfoSec community and to a lessor extent Operations teams.  But software development was never mentioned until only recently.  Understanding this, I wanted to note there are only really 4 frameworks that specifically mention software development:
 
 * NIST 800 SA 10, 11, 15, 16 and 17
+* ISO 27001 Annex A Section 14
 * CIS Section 16
 * Australian ISM "Guidelines for Secure Development"
 
