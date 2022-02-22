@@ -1,5 +1,5 @@
 # The DevSecOps Omnibus Checklist - Version 1.0
-The intent of this project is to create an actionable list of things that any org, of any size, can do to implement a *functioning* DevSecOps program across an estate of applications. Or put more simply: this project is meant to be a list of actionable steps that engineers can follow that will give them a better, more secure application in the ned.  And by "actionable" I mean specific things you can do on a server, in your source code or in a vendor platform that will materially influence the security of your web application. 
+The intent of this project is to create an actionable list of things that any org, of any size, can do to implement a *functioning* DevSecOps program across an estate of applications. Or put more simply: this project is meant to be a list of actionable steps that engineers can follow that will give them a better, more secure application.  And by "actionable" I mean specific things you can do on a server, in your source code or in a vendor platform that will materially influence the security of your web application. 
 
 ## Some background
 
@@ -16,7 +16,7 @@ This checklist is broken down into five areas of concern which will often map to
 
 * [Development environment](#development)  
 * [Source code management](#scm)  
-* [CI/CD](#cicd)  
+* [CI/CD Pipelines & Automation](#cicd)  
 * [Deployment](#deployment)  
 * [Organization](#org)  
 * [Addendum: Compliance](#compliance)  
@@ -61,7 +61,7 @@ Most companies now store their source code in cloud based repositories like GitH
 | Pull Requests | 2 | Enforce pull or merge requests so all code is verified by team lead or senior engineer | <span style="color: orange">Medium</span> | <ul><li>APRA234</li><li>CIS8</li><li>ISO27001</li><li>NIST 800-53B</li><li>SSDF1.1</li></ul> |
 | Peer reviews | 3 | Enforce peer reviews by software engineers colleagues to increase code quality and security | <span style="color: orange">Medium</span> | <ul><li>APRA234</li><li>CIS8</li><li>ISO27001</li><li>NIST 800-53B</li><li>SSDF1.1</li></ul> |
 
-<h2 id="cicd">CI/CD Pipelines & Build Environments</h2>
+<h2 id="cicd">CI/CD Pipelines and Automation</h2>
 
 Modern web applications are built using modern continuous integration and deployment processes.  This means that you run tests specific to whatever environment you are pushing to whether that's DEV, STAGING or PROD.
 
