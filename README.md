@@ -109,8 +109,8 @@ People don't deploy applications, organizations do.  Some steps in the DevSecOps
 | Name | Priority | Description | Difficulty | Maps to security frameworks |
 | :---        | :---   | :--- | :---    | :---    |
 | Penetration Testing | 1 | Have your application pentested regularly | <span style="color: orange">Medium</span> | <ul><li>CIS8</li><li>ISM GSD</li><li>NIST 800-53B</li><li>SSDF1.1</li></ul> |
-| Threat Modeling | 2 |  Build a collaborative way for developers and security staff to understand the threat landscape for an individual application | <span style="color: orange">Medium</span> | <ul><li>CIS8</li><li>ISM GSD</li><li>NIST 800-53B</li><li>SSDF1.1</li></ul> |
-| SIEM | 2 | Implement a SIEM and send all application, system and cloud logs to it | <span style="color: orange">Medium</span> | <ul><li>CIS8</li><li>NIST 800-53B</li><li>SSDF1.1</li></ul> |
+| Threat Modeling | 3 |  Build a collaborative way for developers and security staff to understand the threat landscape for an individual application | <span style="color: red">Difficult</span> | <ul><li>CIS8</li><li>ISM GSD</li><li>NIST 800-53B</li><li>SSDF1.1</li></ul> |
+| SIEM | 3 | Implement a SIEM and send all application, system and cloud logs to it | <span style="color: red">Difficult</span> | <ul><li>CIS8</li><li>NIST 800-53B</li><li>SSDF1.1</li></ul> |
 | Attack Surface Management | 1 | Identify public facing resources via automation | <span style="color: orange">Medium</span> | <ul><li>CIS8</li><li>CIS8</li><li>NIST 800-53B</li><li>SSDF1.1</li></ul> |
 | Sovereignty | 1 | Require that all code is written in, stored in, or otherwise served from a location and/or sovereignty that aligns with orgs requirements | <span style="color: orange">Medium</span> | <ul><li>ISM GCSR</li><li>ISO27001</li></ul> |
 | Vulnerability Disclosure | 1 | Create and publish a set of procedures to let people contact you when they find security issues in your app | <span style="color: green">Easy</span> | <ul><li>CIS8</li><li>ISM GSD</li><li>SSDF1.1</li></ul> |
