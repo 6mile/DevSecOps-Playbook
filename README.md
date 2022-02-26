@@ -1,6 +1,7 @@
 # The DevSecOps Omnibus Playbook - Version 1.0
 This playbook will help you introduce effective DevSecOps practices in your company, regardless of size. We provide explicit guidance and actionable steps to introduce security controls, measure their effectiveness, and demonstrate value for money to your business leaders. Following this playbook will help teams build materially more secure applications, and that in the end, is the intent.
 
+
 ## Some background
 
 This playbook was inspired by several documents and I want to call them out here:
@@ -130,7 +131,7 @@ Because this is meant to be a manifesto about how to do DevSecOps, we have to be
 
 Below you will find links to several security frameworks that align with this document.  I have personally spent many years implementing CIS controls into my application environments.  CIS is a wonderful framework as its very presciptive and easy for an engineer to understand.  This is not to say that CIS controls are easy to implement.  They are not!  Regardless, you can't deny the ubiquity of ISO27001 and SOC2 and I want this document to help orgs looking to meet those requirements as well.  In fact, SecureStack has started a SOC2 program and in parallel to writing this document I am busily mapping SOC2 requirements and will eventually add them to this document.  
 
-I had a number of Australian friends suggest that I tackle the Australian ISM and APRA CPS 234 so you will see me attempt to map it as well when it makes sense.  This is a work in progress and I encourage anyone that is interested to jump in and suggest mappings.  You can add an issue in GitHub or simply create a PR.  
+I had a number of Australian friends suggest that I tackle the Australian ISM and APRA CPS 234, so I've added both of these as well.  This is a work in progress and I encourage anyone that is interested to jump in and suggest mappings.  You can add an issue in GitHub or simply create a PR.  
 
 ### NIST 800
 NIST 800-218 (2022) "Secure Software Development Framework" (SSDF) version 1.1: https://csrc.nist.gov/publications/detail/sp/800-218/final
@@ -184,5 +185,9 @@ Group A.14 revolves around the acquisition and development of IT systems.  It is
 - [ ] map brand new ISO 27002 controls
 - [ ] map remaining NIST 800-53
 - [ ] map remaining ISM infrastructure
+
+## About the author
+
+My name is Paul McCarty and I'm the founder of [SecureStack](https://securestack.com). I created this document as a way to capture in one place the steps I took to implement DevSecOps functions into my team. If you have any questions you can contact me at hello@securestack.com or on twitter @eastside-mccarty 
 
 Sponsored with 💜  by [SecureStack](https://securestack.com)
