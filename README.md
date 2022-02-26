@@ -50,18 +50,19 @@ The developers laptop is where most of the magic happens, but also where most of
 
 <h2 id="scm">Source code management (SCM)</h2>
 
-Most companies now store their source code in cloud based repositories like GitHub, Bitbucket or Gitlab.  Even if you don't you will use a centralized place for your software engineers to store their code.  Centralization and versioning means that these developers can work together without (mostly) stepping on each others toes.  Joe and Molly can both be working on the same component, file or function but their changes won't necessarily break the other ones changes. SCM is also a GREAT place to deploy security functions like server side git hooks and multi-factor authentication for your developers!
+Most companies now store their source code in cloud based repositories like GitHub, Bitbucket or Gitlab.  Even if you don't, you will use a centralized place for your software engineers to store their code.  Centralization and versioning means that these developers can work together without (mostly) stepping on each others toes.  Joe and Molly can both be working on the same component, file or function but their changes won't necessarily break the other ones changes. SCM is also a GREAT place to deploy security functions like server side git hooks and multi-factor authentication for your developers!
 
 | Name | Priority | Description | Difficulty | Maps to security frameworks |
 | :---        | :---   | :--- | :---    | :---    |
 | Source Code Management | 1 | Use a centralized source code management (SCM) system like Bitbucket, GitHub or Gitlab | <span style="color: green">Easy</span> | <ul><li>APRA234</li><li>CIS8</li><li>ISM GSD</li><li>ISO27001</li><li>NIST 800-53B</li><li>SSDF1.1</li></ul> |
 | User Roles | 1 | Create unique user and team roles so that access to source code can be tailored | <span style="color: green">Easy</span> | <ul><li>APRA234</li><li>CIS8</li><li>ISM GSD</li><li>NIST 800-53B</li><li>SSDF1.1</li></ul> |
 | SSH | 2 | Use the SSH protocol to access your repositories instead of HTTPS | <span style="color: green">Easy</span> | <ul><li>APRA234</li><li>CIS8</li><li>ISM GSD</li><li>NIST 800-53B</li><li>SSDF1.1</li></ul> |
+
 | Multi-Factor Authentication | 1 | Make sure all developers use multi-factor authentication (MFA) when pulling, fetching or pushing code to remote. This is especially important if you use company email as your login for SCM | <span style="color: green">Easy</span> | <ul><li>APRA234</li><li>CIS8</li><li>ISM GSD</li><li>NIST 800-53B</li><li>SSDF1.1</li></ul> |
 | Server side git hook | 3 | Utilize a server side git hook like update or post-receive hook to run automatic scans | <span style="color: orange">Medium</span> | <ul><li>APRA234</li><li>CIS8</li><li>NIST 800-53B</li><li>SSDF1.1</li></ul> |
 | Developer Collaboration | 2 | Use collaboration tools to document the changes to a software application | <span style="color: red">Difficult</span> | <ul><li>APRA234</li><li>CIS8</li><li>NIST 800-53B</li><li>SSDF1.1</li></ul> |
-| Pull Requests | 2 | Enforce pull or merge requests so all code is verified by team lead or senior engineer | <span style="color: orange">Medium</span> | <ul><li>APRA234</li><li>CIS8</li><li>ISO27001</li><li>NIST 800-53B</li><li>SSDF1.1</li></ul> |
-| Peer reviews | 3 | Enforce peer reviews by software engineers colleagues to increase code quality and security | <span style="color: orange">Medium</span> | <ul><li>APRA234</li><li>CIS8</li><li>ISO27001</li><li>NIST 800-53B</li><li>SSDF1.1</li></ul> |
+| Pull Requests | 1 | Enforce pull or merge requests so all code is verified by team lead or senior engineer | <span style="color: green">Easy</span> | <ul><li>APRA234</li><li>CIS8</li><li>ISO27001</li><li>NIST 800-53B</li><li>SSDF1.1</li></ul> |
+| Peer reviews | 1 | Enforce peer reviews by software engineers colleagues to increase code quality and security | <span style="color: green">Easy</span> built-in | <ul><li>APRA234</li><li>CIS8</li><li>ISO27001</li><li>NIST 800-53B</li><li>SSDF1.1</li></ul> |
 
 <h2 id="cicd">CI/CD Pipelines and Automation</h2>
 
@@ -81,7 +82,7 @@ Modern web applications are built using modern continuous integration and deploy
 
 <h2 id="deployment">Deployment</h2>
 
-Applications are deployed somewhere whether thats an AWS Lambda, S3 bucket or some old crusty server in the corner of the server room.  In any case, DevSecOps best practices mean that you need to include that deployment location in your processes.  
+Applications are deployed somewhere whether that's an AWS Lambda, S3 bucket or some old crusty server in the corner of the server room.  In any case, DevSecOps best practices mean that you need to include that deployment location in your processes.  
 
 | Name | Priority | Description | Difficulty | Maps to security frameworks |
 | :---        | :---   | :--- | :---    | :---    |
