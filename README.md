@@ -1,52 +1,52 @@
 # The DevSecOps Omnibus Playbook - Version 1.0
-The intent of this project is to create an actionable list of things that any org, of any size, can do to implement a *functioning* DevSecOps program across an estate of applications. Or put more simply: this project is meant to be a list of actionable steps that engineers can follow that will give them a better, more secure application.  And by "actionable" I mean specific things you can do on a server, in your source code or in a vendor platform that will materially influence the security of your web application. 
+This playbook will help you introduce effective DevSecOps practices in your company, regardless of size. We provide explicit guidance and actionable steps to introduce security controls, measure their effectiveness, and demonstrate value for money to your business leaders. Following this playbook will help teams build materially more secure applications, and that in the end, is the intent.
 
 ## Some background
 
-I've been helping software engineering teams build and deploy more secure applications for over 20 years now.  I wrote my first hardening document in 2002 for a large insurance company in the US.  When I was writing that document there wasn't much information available on the internet about how to secure application environments.  What little there was (PCI checklists mostly) was very high-level and super frustrating for an engineer who wants specific tasks that they do and say "I did that thing!".  But, here's the thing, as much as I personally hate many "compliance" frameworks, I've come to appreciate them simply because they give you something to test against.  It's the way you show that "hey! I'm getting better at this!"
+This playbook was inspired by several documents and I want to call them out here:
 
-Unfortunately, most compliance frameworks are disconnected from the actual technical things that technical people have to do to make something better.  Following compliance guidelines is really important but frameworks like the NIST Secure Software Development Framework (SSDF) talk about theoretical or often non-sensical vulnerabilities.  For example, here's a line from the SSDF section PO item 3.2: "Follow recommended security practices to deploy and maintain tools and toolchains."  Then in the implementation examples section there are 9 examples that range from evaluating tools and acquiring tools for the developer environment to collecting evidence for an audit. Like, WTF?!  How is an engineer supposed to know what to do with that?  This is often because the person or group of people writing the framework are technically aligned becasue they come from a risk or GRC background.  We want this DevSecOps Playbook to be different. This document is for engineers!
+The "Minimum Viable Secure Product", or [MVSP](https://mvsp.dev) is a project that I have profound respect for. The MVSP is a great way to determine how mature an organizations security practices are, but it is not a DevSecOps specfic document, nor does it spell out what specific steps to take to enable a prescriptive DevSecOps practice.
 
-I was inspired by the recent [MVSP](https://mvsp.dev) project which I have profound respect for.  But, the MVSP is a framework for defining what a minimally viable secure product is, and not a true checklist of "do this, now do that". This document is NOT meant to replace the MVSP in any way.  Instead this is a separate document with a separate target audience and separate philosophy.  This document, unlike the MVSP, is meant to be the pentultimate playbook for implementing a DevSecOps program at your company.  This document is meant to provide a step by step guide on how to build better software by auditing whats in place now. Finally, I'm selfish and I want a document I can use myself to quickly and efficiently secure an estate of applications.
-
+Timo Pagel's amazing "DevSecOps Maturity Model" or [DSOMM](https://dsomm.timo-pagel.de/) is a project that I only found recently.  There is some overlap between the DSOMM and this document and you should definitely browse through the DSOMM and explore the different maturity levels.
 
 ## Shift Left
 
-Every company and every application is different and that means that simplistic statements like "shift left" need to be clarified.  For many large companies, managers find it difficult to enforce security precautions on the developers laptop like the use of MFA or git hooks.  For this company, it is best to shift left to the CI/CD solution(s) and concentrate initially there.  For smaller startups or companies with immature or non-existant CI/CD pipelines it is easier to shift left all the way to the developers laptop.  If you can define what secure looks like at this early stage, you are saving time and money.  For other organizations, it is a combination, depending on group and maturity, and this is all perfectly fine.  The intent of this document is to provide a roadmap to DevSecOps nirvana and not to say what is the best journey to nirvana.  The journey is yours.  
+All companies and applications are unique. Blanket statements like "Shift Left" aren't helpful without context. Enterprises and startups have different tech stacks, funding, workforces, regulation, and more. Context matters, and this document provides a roadmap to use your context to determine your next DevSecOps destination.
 
-This playbook is broken down into five areas of concern which will often map to different technical roles within an org:
+We want to secure our applications, from cradle to grave. To do this, we have created five categories that cover the lifecycle of a software application. We've also added a Compliance Addendum for anyone that is interested in aligning with a specific compliance framework.
 
-* [Development environment](#development)  
-* [Source code management](#scm)  
-* [CI/CD Pipelines & Automation](#cicd)  
-* [Deployment](#deployment)  
-* [Organization](#org)  
-* [Addendum: Compliance](#compliance)  
+* [Development Environment](#development)
+* [Source Code Management](#scm)
+* [Continuous Integration / Deployment and other Automation](#cicd)
+* [Deployment](#deployment)
+* [Organization](#org)
+* [Addendum: Compliance](#compliance)
 
 ## Priority and Difficulty explained
 
-We use two rating systems in this playbook.  The first rating system is "Priority" and has three levels: 1, 2 and 3.  These levels are meant to impart to the developer which things they should do first, what the should do second, and which things they should do last, or third.
+We use two rating systems.
 
-The second rating system is "Difficulty" and is meant to impart how hard it is to implement this control or function.  This system uses three labels "Easy", "Medium" and finally the hardest "Difficult".  
+Priority indicates the order you should implement controls.
+Difficult indicates how hard implementation is for this control.
 
 ![DevSecOps Continuous Improvement](devsecops-infinity.png)
 
-# The Playbook
+# The Checklist
 
-<h2 id="development">The developers environment</h2>
+<h2 id="development">Development Environment</h2>
 
 The developers laptop is where most of the magic happens, but also where most of the problems are introduced.  If you want to shift as far left as you can this is where you want to land much of your embedded security.
 
 | Name | Priority | Description | Difficulty | Maps to security frameworks |
 | :---        | :---   | :--- | :---    | :---    |
-| Secure Code Training | 2 | Implement a secure coding training program for your devs | <span style="color: orange">Medium</span> | <ul><li>CIS8</li><li>APRA234</li><li>NIST 800-53B</li><li>SSDF1.1</li></ul> |
-| Source Code Versioning | 1 | Use a standard source code version control system (VCS) like git to write or modify source code | <span style="color: green">Easy</span> | <ul><li>APRA234</li><li>CIS8</li><li>ISM GSD</li><li>ISO27001</li><li>NIST 800-53B</li><li>SSDF1.1</li></ul> |
-| .gitignore | 1 | Limit what can be sent to repository via a .gitignore file | <span style="color: green">Easy</span> | <ul><li>APRA234</li><li>CIS8</li><li>NIST 800-53B</li><li>SSDF1.1</li></ul> |
-| Git pre-commit hook | 2 | Utilize a pre-commit git hook to run security scans when code is commited | <span style="color: green">Easy</span> | <ul><li>APRA234</li><li>CIS8</li><li>NIST 800-53B</li><li>SSDF1.1</li></ul> |
-| Local Software Composition Analysis | 1 | Scan source code for vulnerable libraries and open source software in dev environment | <span style="color: green">Easy</span> | <ul><li>APRA234</li><li>CIS8</li><li>ISM GSD</li><li>ISO27001</li><li>NIST 800-53B</li><li>SSDF1.1</li></ul> |
-| Local Static Code Analysis | 2 | Scan source code for vulnerabilities in the source code itself in dev environment | <span style="color: green">Easy</span> | <ul><li>APRA234</li><li>CIS8</li><li>ISM GSD</li><li>ISO27001</li><li>NIST 800-53B</li><li>SSDF1.1</li></ul> |
-| Local Sensitive Data Analysis | 1 | Scan source code for secrets, credentials, API keys and similar in dev environment | <span style="color: green">Easy</span> | <ul><li>APRA234</li><li>CIS8</li><li>ISM GSD</li><li>ISO27001</li><li>NIST 800-53B</li><li>SSDF1.1</li></ul> |
-| Application Baseline | 3 | Create an application baseline | <span style="color: orange">Medium</span> | <ul><li>APRA234</li><li>CIS8</li><li>ISM GSD</li><li>NIST 800-53B</li><li>SSDF1.1</li></ul> |
+| Secure Code Training | 2 | Developers who receive Secure Code Training are less likely to introduce security bugs, be aware of tooling that can support them, and design systems with security in mind. | <span style="color: orange">Medium</span> | <ul><li>CIS8 16.9</li><li>APRA234 ATM B-2-f</li><li>[NIST 800-53B SA-16](https://csrc.nist.gov/projects/risk-management/sp800-53-controls/release-search#!/control?version=5.1&number=SA-16)</li><li>SSDF1.1-PO.2.2</li></ul> |
+| Source Code Versioning | 1 | Version Control Systems introduce peer review processes, an auditable history, and consistent work patterns between software engineers. | <span style="color: green">Easy</span> | <ul><li>APRA234 ATM B-2-f</li><li>CIS8 16.1</li><li>ISM GSD SC-1419-R1</li><li>ISO27001 A.14.2.1</li><li>[NIST 800-53B SA-15(10)](https://csrc.nist.gov/projects/risk-management/sp800-53-controls/release-search#!/control?version=5.1&number=SA-15)</li><li>SSDF1.1-PO.3.1</li><li>SSDF1.1-PS.3.1</li></ul> |
+| .gitignore | 1 | .gitignore files help prevent accidental commits of sensitive, debug, or workstation specific data | <span style="color: green">Easy</span> | <ul><li>APRA234 ATM D-2-d-iii</li><li>CIS8 16.1</li><li>[NIST 800-53B SA-15(12)](https://csrc.nist.gov/projects/risk-management/sp800-53-controls/release-search#!/control?version=5.1&number=SA-15)</li><li>SSDF1.1-PW.8.2</li></ul> |
+| Git pre-commit hook | 2 | A Pre-Commit Hook for security scans provides timely feedback to engineers and helps to prevent vulnerable code being introduced to a repository | <span style="color: green">Easy</span> | <ul><li>APRA234 ATM D-2-d-ii</li><li>CIS8 16.12</li><li>[NIST 800-53B SA-11(1)](https://csrc.nist.gov/projects/risk-management/sp800-53-controls/release-search#!/control?version=5.1&number=SA-11)</li><li>SSDF1.1-PW.8.2</li></ul> |
+| Local Software Composition Analysis | 1 | Helps you find and fix libraries with known security issues. Developers should implement SCA tests in their local environment | <span style="color: green">Easy</span> | <ul><li>APRA234 ATM D-2-d-ii</li><li>CIS8 16.5</li><li>ISM GSD SC-0402-R3</li><li>ISO27001 A.14.2.1</li><li>[NIST 800-53B SA-15(7)](https://csrc.nist.gov/projects/risk-management/sp800-53-controls/release-search#!/control?version=5.1&number=SA-15)</li><li>SSDF1.1-PW.8.2</li></ul> |
+| Local Static Code Analysis | 2 | Helps you find and fix security vulnerabilities in your source code. Developers should implement SAST tests in their local environment | <span style="color: green">Easy</span> | <ul><li>APRA234 ATM D-2-d-ii</li><li>CIS8 16.12</li><li>ISM GSD SC-0402-R3</li><li>ISO27001 A.14.2.1</li><li>[NIST 800-53B SA-11(1)](https://csrc.nist.gov/projects/risk-management/sp800-53-controls/release-search#!/control?version=5.1&number=SA-11)</li><li>SSDF1.1-PW.8.2</li></ul> |
+| Local Sensitive Data Analysis | 1 | Audits your repository for secrets, credentials, API keys and similar in dev environment. Secrets stored in source code are visible to other people | <span style="color: green">Easy</span> | <ul><li>APRA234 ATM D-2-ii</li><li>CIS8 16.12</li><li>ISM GSD SC-0401-R4</li><li>ISO27001 A.14.2.1</li><li>[NIST 800-53B SA-15(2)](https://csrc.nist.gov/projects/risk-management/sp800-53-controls/release-search#!/control?version=5.1&number=SA-15)</li><li>SSDF1.1-PW.8.2</li></ul> |
+| Application Baseline | 3 | Create an application baseline | <span style="color: orange">Medium</span> | <ul><li>APRA234 ATM D-2-ii</li><li>CIS8 16.7</li><li>ISM GSD SC-1238-R3</li><li>[NIST 800-53B SA-17(1)](https://csrc.nist.gov/projects/risk-management/sp800-53-controls/release-search#!/control?version=5.1&number=SA-17)</li><li>SSDF1.1-PW.9.1</li></ul> |
 
 <h2 id="scm">Source code management (SCM)</h2>
 
@@ -111,7 +111,7 @@ People don't deploy applications, organizations do.  Some steps in the DevSecOps
 | Penetration Testing | 1 | Have your application pentested regularly | <span style="color: orange">Medium</span> | <ul><li>CIS8</li><li>ISM GSD</li><li>NIST 800-53B</li><li>SSDF1.1</li></ul> |
 | Threat Modeling | 3 |  Build a collaborative way for developers and security staff to understand the threat landscape for an individual application | <span style="color: red">Difficult</span> | <ul><li>CIS8</li><li>ISM GSD</li><li>NIST 800-53B</li><li>SSDF1.1</li></ul> |
 | SIEM | 3 | Implement a SIEM and send all application, system and cloud logs to it | <span style="color: red">Difficult</span> | <ul><li>CIS8</li><li>NIST 800-53B</li><li>SSDF1.1</li></ul> |
-| Attack Surface Management | 1 | Identify public facing resources via automation | <span style="color: orange">Medium</span> | <ul><li>CIS8</li><li>CIS8</li><li>NIST 800-53B</li><li>SSDF1.1</li></ul> |
+| Attack Surface Management | 1 | Identify public facing resources via automation | <span style="color: green">Easy</span> | <ul><li>CIS8</li><li>CIS8</li><li>NIST 800-53B</li><li>SSDF1.1</li></ul> |
 | Sovereignty | 1 | Require that all code is written in, stored in, or otherwise served from a location and/or sovereignty that aligns with orgs requirements | <span style="color: orange">Medium</span> | <ul><li>ISM GCSR</li><li>ISO27001</li></ul> |
 | Vulnerability Disclosure | 1 | Create and publish a set of procedures to let people contact you when they find security issues in your app | <span style="color: green">Easy</span> | <ul><li>CIS8</li><li>ISM GSD</li><li>SSDF1.1</li></ul> |
 | Bug Bounty | 3 | Setup a bug bounty program to incentivize security researchers to tell you about vulnerabilities they find | <span style="color: orange">Medium</span> | <ul><li>CIS8</li><li>ISM GSD</li><li>NIST 800-53B</li><li>SSDF1.1</li></ul> |
@@ -164,6 +164,11 @@ You can find the GSD here:  https://www.cyber.gov.au/acsc/view-all-content/advic
 The Australian Prudential Regulation Authority (APRA) is part of the Australian government and is charged with regulating the financial industry. It published the "Prudential Standard CPS 234" document in 2019 which outlines high level information security requirements. 
 
 This document is organized in an unusual way with 8 "attachments" at the end of the doc.  It is in these attachments that the security controls and expectations are laid out. You can find the APRA 234 document at https://www.apra.gov.au/sites/default/files/cpg_234_information_security_june_2019_0.pdf.   
+
+### ISO27001 Annex A.14: System Acquisition, Development & Maintenance
+ISO27001 is an international standard on how to manage information security. It measures the maturity of an organization with a total of 114 controls spread across 14 groupings. ISO27001 is built on the principle of gathering the documentation around these security controls in an information security management system (ISMS).
+
+Group A.14 revolves around the acquisition and development of IT systems.  It is the only part of the ISO27001 specification that mentions specific  
 
 ## What's been mapped so far?
 
