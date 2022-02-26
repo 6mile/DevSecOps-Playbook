@@ -1,4 +1,4 @@
-# The DevSecOps Omnibus Playbook - Version 1.0
+# DevSecOps Playbook - Version 1.0
 This playbook will help you introduce effective DevSecOps practices in your company, regardless of size. We provide explicit guidance and actionable steps to introduce security controls, measure their effectiveness, and demonstrate value for money to your business leaders. Following this playbook will help teams build materially more secure applications, and that in the end, is the intent.
 
 
@@ -6,7 +6,7 @@ This playbook will help you introduce effective DevSecOps practices in your comp
 
 This playbook was inspired by several documents and I want to call them out here:
 
-The "Minimum Viable Secure Product", or [MVSP](https://mvsp.dev) is a project that I have profound respect for. The MVSP is a great way to determine how mature an organizations security practices are, but it is not a DevSecOps specfic document, nor does it spell out what specific steps to take to enable a prescriptive DevSecOps practice.
+The "Minimum Viable Secure Product", or [MVSP](https://mvsp.dev) is a project that I have profound respect for. The MVSP is a great way to determine how mature an organizations security practices are.
 
 Timo Pagel's amazing "DevSecOps Maturity Model" or [DSOMM](https://dsomm.timo-pagel.de/) is a project that I only found recently.  There is some overlap between the DSOMM and this document and you should definitely browse through the DSOMM and explore the different maturity levels.
 
@@ -25,10 +25,7 @@ We want to secure our applications, from cradle to grave. To do this, we have cr
 
 ## Priority and Difficulty explained
 
-We use two rating systems.
-
-Priority indicates the order you should implement controls.
-Difficult indicates how hard implementation is for this control.
+We use two rating systems:  **Priority** indicates the order you should implement controls and **Difficulty** indicates how hard implementation is for this control.
 
 ![DevSecOps Continuous Improvement](devsecops-infinity.png)
 
@@ -182,6 +179,7 @@ Group A.14 revolves around the acquisition and development of IT systems.  It is
 
 - [ ] map CIS section other than 16 to all items
 - [ ] map remaining ISO 27001 Annex 14
+- [ ] create compliance section for ISO 27002
 - [ ] map brand new ISO 27002 controls
 - [ ] map remaining NIST 800-53
 - [ ] map remaining ISM infrastructure
