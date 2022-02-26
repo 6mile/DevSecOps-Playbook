@@ -120,21 +120,22 @@ People don't deploy applications, organizations do.  Some steps in the DevSecOps
 
 <h2 id="compliance">Compliance - Security Framework Reference Material</h2> 
 
-Because this is meant to be a manifesto about how to do DevSecOps, we have to be cognizant that there are three groups of people that this affects: Developers, Operations and InfoSec.  Historically, there are many compliance frameworks that address the InfoSec community and to a lessor extent Operations teams.  But software development was never mentioned until only recently.  Understanding this, I wanted to note there are only really 4 frameworks that specifically mention software development:
+Because this is meant to be a manifesto about how to do DevSecOps, we have to be cognizant that there are three groups of people that this affects: Developers, Operations and InfoSec.  Historically, there are many compliance frameworks that address the InfoSec community and to a lessor extent Operations teams.  But software development was never mentioned until only recently.  Understanding this, I wanted to note that most commonly there is only one section of a particular compliance framework that relates to software development. This is a list of the specific sections of several larger compliance frameworks that deal with software development specifically.
 
-* NIST 800 SA 10, 11, 15, 16 and 17
+* NIST 800-53b SA 10, 11, 15, 16 and 17
+* NIST 800-218 "Secure Software Development Framework"
 * ISO 27001 Annex A Section 14
 * CIS Section 16
 * Australian ISM "Guidelines for Secure Development"
 
 Below you will find links to several security frameworks that align with this document.  I have personally spent many years implementing CIS controls into my application environments.  CIS is a wonderful framework as its very presciptive and easy for an engineer to understand.  This is not to say that CIS controls are easy to implement.  They are not!  Regardless, you can't deny the ubiquity of ISO27001 and SOC2 and I want this document to help orgs looking to meet those requirements as well.  In fact, SecureStack has started a SOC2 program and in parallel to writing this document I am busily mapping SOC2 requirements and will eventually add them to this document.  
 
-I had a number of Australian friends suggest that I tackle the Australian ISM and APRA CPS 234 as well so you will see me attempt to map it as well when it makes sense.  This is a work in progress and I encourage anyone that is interested to jump in and suggest mappings.  You can add an issue in GitHub or simply create a PR.  
+I had a number of Australian friends suggest that I tackle the Australian ISM and APRA CPS 234 so you will see me attempt to map it as well when it makes sense.  This is a work in progress and I encourage anyone that is interested to jump in and suggest mappings.  You can add an issue in GitHub or simply create a PR.  
 
 ### NIST 800
-NIST 800-218 "Secure Software Development Framework" (SSDF) version 1.1: https://csrc.nist.gov/publications/detail/sp/800-218/draft  
+NIST 800-218 (2022) "Secure Software Development Framework" (SSDF) version 1.1: https://csrc.nist.gov/publications/detail/sp/800-218/final
 
-NIST 800-53B (2021): https://csrc.nist.gov/publications/detail/sp/800-53b/final   
+NIST 800-53b (2021): https://csrc.nist.gov/publications/detail/sp/800-53b/final   
 Control Families via HTML: https://csrc.nist.gov/projects/risk-management/sp800-53-controls/release-search#!/families?version=5.1
 
 1. [SA-11: Developer Testing and Evaluation](https://csrc.nist.gov/projects/risk-management/sp800-53-controls/release-search#!/control?version=5.1&number=SA-11)   
@@ -178,8 +179,9 @@ Group A.14 revolves around the acquisition and development of IT systems.  It is
 
 ## What's left to do?
 
-- [ ] map remaining ISO 27001 Annex 14
 - [ ] map CIS section other than 16 to all items
+- [ ] map remaining ISO 27001 Annex 14
+- [ ] map brand new ISO 27002 controls
 - [ ] map remaining NIST 800-53
 - [ ] map remaining ISM infrastructure
 
