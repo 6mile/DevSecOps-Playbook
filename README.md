@@ -27,7 +27,7 @@ We want to secure our applications, from cradle to grave. To do this, we have cr
 
 We use two rating systems:  **Priority** indicates the order you should implement controls and **Difficulty** indicates how hard implementation is for this control.
 
-![DevSecOps Continuous Improvement](devsecops-loop-securestack-final.png)
+![DevSecOps Continuous Improvement](devsecops-loop-securestack-final-1280x640.png)
 
 # The Checklist
 
