@@ -10,6 +10,8 @@ The "Minimum Viable Secure Product", or [MVSP](https://mvsp.dev) is a project th
 
 Timo Pagel's amazing "DevSecOps Maturity Model" or [DSOMM](https://dsomm.timo-pagel.de/) is a project that I only found recently.  There is some overlap between the DSOMM and this document and you should definitely browse through the DSOMM and explore the different maturity levels.
 
+## Sponsors 
+
 ## Shift Left
 
 All companies and applications are unique. Blanket statements like "Shift Left" aren't helpful without context. Enterprises and startups have different tech stacks, funding, workforces, regulation, and more. Context matters, and this document provides a roadmap to use your context to determine your next DevSecOps destination.
@@ -45,7 +47,7 @@ The developers laptop is where most of the magic happens, but also where most of
 | 1.6 | Local Software Composition Analysis | 1 | Helps you find and fix libraries with known security issues | <span style="color: green">Easy</span> | <ul><li>APRA234</li><li>CIS8</li><li>ISM GSD</li><li>ISO27001</li><li>NIST 800-53B</li><li>SSDF1.1</li></ul> |
 | 1.7 | Local Static Code Analysis | 2 | Helps you find and fix security vulnerabilities in your source code | <span style="color: green">Easy</span> | <ul><li>APRA234</li><li>CIS8</li><li>ISM GSD</li><li>ISO27001</li><li>NIST 800-53B</li><li>SSDF1.1</li></ul> |
 | 1.8 | Local Sensitive Data Analysis | 1 | Audits your repository for secrets, credentials, API keys and similar in dev environment. Secrets stored in source code are visible to other people | <span style="color: green">Easy</span> | <ul><li>APRA234</li><li>CIS8</li><li>ISM GSD</li><li>ISO27001</li><li>NIST 800-53B</li><li>SSDF1.1</li></ul> |
-| 1.9 | Application Baseline | 3 | Create an application baseline | <span style="color: orange">Medium</span> | <ul><li>APRA234</li><li>CIS8</li><li>ISM GSD</li><li>NIST 800-53B</li><li>SSDF1.1</li></ul> |
+| 1.9 | Application Baseline | 3 | Create a "recipe" for building the application from ground up that takes into consideration its risk and compliance requirements, data sensitivity, stakeholders and relationships with other systems, as well as its technical components. | <span style="color: orange">Medium</span> | <ul><li>APRA234</li><li>CIS8</li><li>ISM GSD</li><li>NIST 800-53B</li><li>SSDF1.1</li></ul> |
 
 <h2 id="scm">Source code management (SCM)</h2>
 
