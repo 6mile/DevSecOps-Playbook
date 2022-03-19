@@ -63,6 +63,7 @@ Most companies now store their source code in cloud based repositories like GitH
 | 2.6 | Developer Collaboration | 2 | Use collaboration tools to document the changes to a software application | <span style="color: red">Difficult</span> | <ul><li>APRA234</li><li>CIS8</li><li>NIST 800-53B</li><li>SSDF1.1</li></ul> |
 | 2.6 | Pull Requests | 1 | Enforce pull or merge requests so all code is verified by team lead or senior engineer | <span style="color: green">Easy</span> | <ul><li>APRA234</li><li>CIS8</li><li>ISO27001</li><li>NIST 800-53B</li><li>SSDF1.1</li></ul> |
 | 2.8 | Peer reviews | 1 | Enforce peer reviews by software engineers colleagues to increase code quality and security | <span style="color: green">Easy</span> | <ul><li>APRA234</li><li>CIS8</li><li>ISO27001</li><li>NIST 800-53B</li><li>SSDF1.1</li></ul> |
+| 2.9 | CODEOWNERS | 1 | Create a CODEOWNERS file that identifies people and teams that own specific parts of the repository and should be consulted via PR when those parts of the repo are modified. | <span style="color: green">Easy</span> | <ul><li>APRA234</li><li>CIS8</li><li>ISO27001</li><li>NIST 800-53B</li><li>SSDF1.1</li></ul> |
 
 <h2 id="cicd">CI/CD Pipelines and Automation</h2>
 
