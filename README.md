@@ -11,7 +11,9 @@ The "Minimum Viable Secure Product", or [MVSP](https://mvsp.dev) is a project th
 Timo Pagel's amazing "DevSecOps Maturity Model" or [DSOMM](https://dsomm.timo-pagel.de/) is a project that I only found recently.  There is some overlap between the DSOMM and this document and you should definitely browse through the DSOMM and explore the different maturity levels.
 
 ## Sponsors 
-Sponsored with 💜  by [SecureStack](https://securestack.com)
+Sponsored with 💜  by
+<a href="https://securestack.com" target=”_blank” rel="noopener noreferrer"><img src="https://securestack.com/wp-content/uploads/2021/09/securestack-horizontal.png"/></a>
+
 
 ## Shift Left
 
