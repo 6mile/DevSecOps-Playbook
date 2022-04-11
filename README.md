@@ -13,7 +13,7 @@ Timo Pagel's amazing "DevSecOps Maturity Model" or [DSOMM](https://dsomm.timo-pa
 ## Sponsors 
 Sponsored with 💜  by
 
-<a href="https://securestack.com" target=”_blank” rel="noopener noreferrer"><img src="https://securestack.com/wp-content/uploads/2021/09/securestack-horizontal.png" width="500"/></a>
+<a href="https://securestack.com" target=”_blank” rel="noopener noreferrer"><center><img src="https://securestack.com/wp-content/uploads/2021/09/securestack-horizontal.png" width="500"/></center></a>
 
 
 ## Shift Left
