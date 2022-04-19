@@ -198,3 +198,4 @@ Group A.14 revolves around the acquisition and development of IT systems.  It is
 
 My name is Paul McCarty and I'm the founder of [SecureStack](https://securestack.com). I created this document as a way to capture in one place the steps I took to implement DevSecOps functions into my team. If you have any questions you can contact me at hello@securestack.com or on twitter [@eastside-mccarty](https://twitter.com/eastsidemccarty) 
 
+
