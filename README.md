@@ -1,4 +1,4 @@
-# DevSecOps Playbook - Version 1.0
+# DevSecOps Playbook - Version 1.1 - July 2022
 This playbook will help you introduce effective DevSecOps practices in your company, regardless of size. We provide explicit guidance and actionable steps to introduce security controls, measure their effectiveness, and demonstrate value for money to your business leaders. Following this playbook will help teams build materially more secure applications, and that in the end, is the intent.
 
 
@@ -24,9 +24,9 @@ We want to secure our applications, from cradle to grave. To do this, we have cr
 
 * [Development Environment](#development)
 * [Source Code Management](#scm)
-* [Continuous Integration / Deployment and other Automation](#cicd)
+* [Continuous Improvement and Automation](#cicd)
 * [Deployment](#deployment)
-* [Organization](#org)
+* [Organizational Techniques](#org)
 * [Addendum: Compliance](#compliance)
 
 ## Priority and Difficulty explained
@@ -86,6 +86,8 @@ Modern web applications are built using modern continuous integration and deploy
 | 3.7 | Centralized Static Code Analysis | 2 | Scan source code for vulnerabilities in the source code itself from within a CD stage | <span style="color: green">Easy</span> | <ul><li>APRA234</li><li>CIS8</li><li>ISM GSD</li><li>ISO27001</li><li>NIST 800-53.2b</li><li>SSDF1.1</li></ul> |
 | 3.8 | Centralized Sensitive Data Analysis | 2 | Scan source code for secrets, credentials, API keys and similar from within a CD stage | <span style="color: green">Easy</span> | <ul><li>APRA234</li><li>CIS8</li><li>ISM GSD</li><li>ISO27001</li><li>NIST 800-53B</li><li>SSDF1.1</li></ul> |
 | 3.9 | DAST | 3 | Scan running application for vulnerabilities | <span style="color: orange">Medium</span> | <ul><li>CIS8</li><li>ISM GSD</li><li>ISO27001</li><li>NIST 800-53B</li><li>NIST 800-53B</li><li>SSDF1.1</li></ul> |
+| 3.10 | Transient Test Compute | 2 | Verify that the compute you use in CI/CD pipelines are up to date and using most recent applications and operating systems | <span style="color: orange">Medium</span> | <ul><li>CIS8</li><li>ISM GSD</li><li>ISO27001<li>SSDF1.1</li></ul> |
+| 3.11 | Harden Transient Compute | 3 | Harden the transient compute you are using in your pipelines. Follow CIS guidelines for container hardening. | <span style="color: red">Difficult</span> | <ul><li>CIS8</li><li>ISM GSM</li><li>ISM GOSH</li><li>SSDF1.1</li></ul> |
 
 <h2 id="deployment">Deployment</h2>
 
@@ -110,8 +112,9 @@ Applications are deployed somewhere whether that's an AWS Lambda, S3 bucket or s
 | 4.15 | SBOM | 3 | Generate a **real-time** software bill-of-materials (SBOM) | <span style="color: orange">Medium</span> | <ul><li>CIS8</li><li>ISM GSD</li><li>NIST 800-53B</li><li>SSDF1.1</li></ul> |
 | 4.16 | Monitor Application | 1 | Monitor your application in real-time so you know when its state changes for the worse (or better). This includes uptime, performance and security monitoring | <span style="color: orange">Medium</span> | <ul><li>CIS8</li><li>NIST 800-53B</li><li>SSDF1.1</li></ul> |
 | 4.17 | Cloud Security Posture | 2 | If your application is deployed in the cloud or uses cloud native services then a solution should be employed to verify that those cloud resources are secure and follow best practices | <span style="color: orange">Medium</span> | <ul><li>CIS8</li><li>NIST 800-53B</li><li>SSDF1.1</li></ul> |
+| 4.18 | Centralized Container Analysis | 2 | Scan any containers built for deployment for vulnerabilities | <span style="color: green">Easy</span> | <ul><li>APRA234</li><li>CIS8</li><li>ISM GSD</li><li>ISO27001</li><li>NIST 800-53.2a</li><li>SSDF1.1</li></ul> |
 
-<h2 id="org">Organization</h2>
+<h2 id="org">Organizational Techniques</h2>
 
 People don't deploy applications, organizations do.  Some steps in the DevSecOps playbook need to be owned by the Organization itself.  
 
