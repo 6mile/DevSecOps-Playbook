@@ -1,4 +1,4 @@
-# DevSecOps Playbook - Version 1.0
+# DevSecOps Playbook - Version 1.2 - August 2022
 This playbook will help you introduce effective DevSecOps practices in your company, regardless of size. We provide explicit guidance and actionable steps to introduce security controls, measure their effectiveness, and demonstrate value for money to your business leaders. Following this playbook will help teams build materially more secure applications, and that in the end, is the intent.
 
 
@@ -20,13 +20,13 @@ Sponsored with 💜  by
 
 All companies and applications are unique. Blanket statements like "Shift Left" aren't helpful without context. Enterprises and startups have different tech stacks, funding, workforces, regulation, and more. Context matters, and this document provides a roadmap to use your context to determine your next DevSecOps destination.
 
-We want to secure our applications, from cradle to grave. To do this, we have created five categories that cover the lifecycle of a software application. We've also added a Compliance Addendum for anyone that is interested in aligning with a specific compliance framework.
+We want to secure our applications, from cradle to grave. To do this, we have created five "domains" that cover the lifecycle of a software application. There are a total of 57 "controls" or "functions" in the DevSecOps Playbook that are spread evenly across those five domains.  We've also added a Compliance Addendum for anyone that is interested in aligning with a specific compliance framework.
 
 * [Development Environment](#development)
 * [Source Code Management](#scm)
-* [Continuous Integration / Deployment and other Automation](#cicd)
+* [Continuous Improvement and Automation](#cicd)
 * [Deployment](#deployment)
-* [Organization](#org)
+* [Organizational Techniques](#org)
 * [Addendum: Compliance](#compliance)
 
 ## Priority and Difficulty explained
@@ -35,7 +35,7 @@ We use two rating systems:  **Priority** indicates the order you should implemen
 
 ![DevSecOps Continuous Improvement](devsecops-loop-securestack-final-1280x640.png)
 
-# The Checklist
+# The Playbook
 
 <h2 id="development">Development Environment</h2>
 
@@ -69,7 +69,8 @@ Most companies now store their source code in cloud based repositories like GitH
 | 2.7 | Developer Collaboration | 2 | Use collaboration tools to document the changes to a software application | <span style="color: red">Difficult</span> | <ul><li>APRA234</li><li>CIS8</li><li>NIST 800-53B</li><li>SSDF1.1</li></ul> |
 | 2.8 | Pull Requests | 1 | Enforce pull or merge requests so all code is verified by team lead or senior engineer | <span style="color: green">Easy</span> | <ul><li>APRA234</li><li>CIS8</li><li>ISO27001</li><li>NIST 800-53B</li><li>SSDF1.1</li></ul> |
 | 2.9 | Peer Reviews | 1 | Enforce peer reviews by software engineers colleagues to increase code quality and security | <span style="color: green">Easy</span> | <ul><li>APRA234</li><li>CIS8</li><li>ISO27001</li><li>NIST 800-53B</li><li>SSDF1.1</li></ul> |
-| 2.10 | CODEOWNERS | 1 | Create a CODEOWNERS file that identifies people and teams that own specific parts of the repository and should be consulted via PR when those parts of the repo are modified. | <span style="color: green">Easy</span> | <ul><li>APRA234</li><li>CIS8</li><li>ISO27001</li><li>NIST 800-53B</li><li>SSDF1.1</li></ul> |
+| 2.10 | CODEOWNERS | 1 | Create a CODEOWNERS file in the repository that identifies people and teams that own specific parts of the repository and should be consulted via PR when those parts of the repo are modified. | <span style="color: green">Easy</span> | <ul><li>APRA234</li><li>CIS8</li><li>ISO27001</li><li>NIST 800-53B</li><li>SSDF1.1</li></ul> |
+| 2.11 | SECURITY.md | 1 | Create a SECURITY.md file in your repository that explains who to contact if you find a security issue in the application | <span style="color: green">Easy</span> | <ul><li>APRA234</li><li>CIS8</li><li>ISO27001</li><li>NIST 800-53B</li><li>SSDF1.1</li></ul> |
 
 <h2 id="cicd">CI/CD Pipelines and Automation</h2>
 
@@ -86,6 +87,8 @@ Modern web applications are built using modern continuous integration and deploy
 | 3.7 | Centralized Static Code Analysis | 2 | Scan source code for vulnerabilities in the source code itself from within a CD stage | <span style="color: green">Easy</span> | <ul><li>APRA234</li><li>CIS8</li><li>ISM GSD</li><li>ISO27001</li><li>NIST 800-53.2b</li><li>SSDF1.1</li></ul> |
 | 3.8 | Centralized Sensitive Data Analysis | 2 | Scan source code for secrets, credentials, API keys and similar from within a CD stage | <span style="color: green">Easy</span> | <ul><li>APRA234</li><li>CIS8</li><li>ISM GSD</li><li>ISO27001</li><li>NIST 800-53B</li><li>SSDF1.1</li></ul> |
 | 3.9 | DAST | 3 | Scan running application for vulnerabilities | <span style="color: orange">Medium</span> | <ul><li>CIS8</li><li>ISM GSD</li><li>ISO27001</li><li>NIST 800-53B</li><li>NIST 800-53B</li><li>SSDF1.1</li></ul> |
+| 3.10 | Transient Test Compute | 2 | Verify that the compute you use in CI/CD pipelines are up to date and using most recent applications and operating systems | <span style="color: orange">Medium</span> | <ul><li>CIS8</li><li>ISM GSD</li><li>ISO27001<li>SSDF1.1</li></ul> |
+| 3.11 | Harden Transient Compute | 3 | Harden the transient compute you are using in your pipelines. Follow CIS guidelines for container hardening. | <span style="color: red">Difficult</span> | <ul><li>CIS8</li><li>ISM GSM</li><li>ISM GOSH</li><li>SSDF1.1</li></ul> |
 
 <h2 id="deployment">Deployment</h2>
 
@@ -109,9 +112,10 @@ Applications are deployed somewhere whether that's an AWS Lambda, S3 bucket or s
 | 4.14 | Encrypt Storage | 3 | Encrypt all filesystems, disks and cloud storage | <span style="color: orange">Medium</span> | <ul><li>CIS8</li><li>NIST 800-50b</li><li>SSDF1.1</li></ul> |
 | 4.15 | SBOM | 3 | Generate a **real-time** software bill-of-materials (SBOM) | <span style="color: orange">Medium</span> | <ul><li>CIS8</li><li>ISM GSD</li><li>NIST 800-53B</li><li>SSDF1.1</li></ul> |
 | 4.16 | Monitor Application | 1 | Monitor your application in real-time so you know when its state changes for the worse (or better). This includes uptime, performance and security monitoring | <span style="color: orange">Medium</span> | <ul><li>CIS8</li><li>NIST 800-53B</li><li>SSDF1.1</li></ul> |
-| 4.17 | Cloud Security Posture | 2 | If your application is deployed in the cloud or uses cloud native services then solution should be employed to verify that those cloud resources are secure and follow best practices | <span style="color: orange">Medium</span> | <ul><li>CIS8</li><li>NIST 800-53B</li><li>SSDF1.1</li></ul> |
+| 4.17 | Cloud Security Posture | 2 | If your application is deployed in the cloud or uses cloud native services then a solution should be employed to verify that those cloud resources are secure and follow best practices | <span style="color: orange">Medium</span> | <ul><li>CIS8</li><li>NIST 800-53B</li><li>SSDF1.1</li></ul> |
+| 4.18 | Centralized Container Analysis | 2 | Scan any containers built for deployment for vulnerabilities | <span style="color: green">Easy</span> | <ul><li>APRA234</li><li>CIS8</li><li>ISM GSD</li><li>ISO27001</li><li>NIST 800-53.2a</li><li>SSDF1.1</li></ul> |
 
-<h2 id="org">Organization</h2>
+<h2 id="org">Organizational Techniques</h2>
 
 People don't deploy applications, organizations do.  Some steps in the DevSecOps playbook need to be owned by the Organization itself.  
 
