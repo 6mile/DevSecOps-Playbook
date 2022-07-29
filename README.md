@@ -35,7 +35,7 @@ We use two rating systems:  **Priority** indicates the order you should implemen
 
 ![DevSecOps Continuous Improvement](devsecops-loop-securestack-final-1280x640.png)
 
-# The Checklist
+# The Playbook
 
 <h2 id="development">Development Environment</h2>
 
