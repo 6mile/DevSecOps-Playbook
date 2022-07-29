@@ -1,4 +1,4 @@
-# DevSecOps Playbook - Version 1.1 - July 2022
+# DevSecOps Playbook - Version 1.2 - August 2022
 This playbook will help you introduce effective DevSecOps practices in your company, regardless of size. We provide explicit guidance and actionable steps to introduce security controls, measure their effectiveness, and demonstrate value for money to your business leaders. Following this playbook will help teams build materially more secure applications, and that in the end, is the intent.
 
 
@@ -20,7 +20,7 @@ Sponsored with 💜  by
 
 All companies and applications are unique. Blanket statements like "Shift Left" aren't helpful without context. Enterprises and startups have different tech stacks, funding, workforces, regulation, and more. Context matters, and this document provides a roadmap to use your context to determine your next DevSecOps destination.
 
-We want to secure our applications, from cradle to grave. To do this, we have created five categories that cover the lifecycle of a software application. We've also added a Compliance Addendum for anyone that is interested in aligning with a specific compliance framework.
+We want to secure our applications, from cradle to grave. To do this, we have created five "domains" that cover the lifecycle of a software application. There are a total of 57 "controls" or "functions" in the DevSecOps Playbook that are spread evenly across those five domains.  We've also added a Compliance Addendum for anyone that is interested in aligning with a specific compliance framework.
 
 * [Development Environment](#development)
 * [Source Code Management](#scm)
