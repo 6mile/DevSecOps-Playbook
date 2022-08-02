@@ -20,7 +20,7 @@ Sponsored with 💜  by
 
 All companies and applications are unique. Blanket statements like "Shift Left" aren't helpful without context. Enterprises and startups have different tech stacks, funding, workforces, regulation, and more. Context matters, and this document provides a roadmap to use your context to determine your next DevSecOps destination.
 
-We want to secure our applications, from cradle to grave. To do this, we have created five "domains" that cover the lifecycle of a software application. There are a total of 57 "controls" or "functions" in the DevSecOps Playbook that are spread evenly across those five domains.  We've also added a Compliance Addendum for anyone that is interested in aligning with a specific compliance framework.
+We want to secure our applications, from cradle to grave. To do this, we have created five "domains" that cover the lifecycle of a software application. There are a total of 58 "controls" or "functions" in the DevSecOps Playbook that are spread evenly across those five domains.  We've also added a Compliance Addendum for anyone that is interested in aligning with a specific compliance framework.
 
 * [Development Environment](#development)
 * [Source Code Management](#scm)
@@ -114,6 +114,7 @@ Applications are deployed somewhere whether that's an AWS Lambda, S3 bucket or s
 | 4.16 | Monitor Application | 1 | Monitor your application in real-time so you know when its state changes for the worse (or better). This includes uptime, performance and security monitoring | <span style="color: orange">Medium</span> | <ul><li>CIS8</li><li>NIST 800-53B</li><li>SSDF1.1</li></ul> |
 | 4.17 | Cloud Security Posture | 2 | If your application is deployed in the cloud or uses cloud native services then a solution should be employed to verify that those cloud resources are secure and follow best practices | <span style="color: orange">Medium</span> | <ul><li>CIS8</li><li>NIST 800-53B</li><li>SSDF1.1</li></ul> |
 | 4.18 | Centralized Container Analysis | 2 | Scan any containers built for deployment for vulnerabilities | <span style="color: green">Easy</span> | <ul><li>APRA234</li><li>CIS8</li><li>ISM GSD</li><li>ISO27001</li><li>NIST 800-53.2a</li><li>SSDF1.1</li></ul> |
+| 4.19 | IaC | 2 | Use infrastructure as code to build all application environments | <span style="color: orange">Medium</span> | <ul><li>CIS8</li><li>ISM GSM</li><li>ISM GOSH</li><li>SSDF1.1</li></ul> |
 
 <h2 id="org">Organizational Techniques</h2>
 
