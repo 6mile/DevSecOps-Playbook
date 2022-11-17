@@ -2,7 +2,93 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 
+import { useState, useReducer } from 'react';
+
+import {
+  createColumnHelper,
+  flexRender,
+  getCoreRowModel,
+  useReactTable,
+} from '@tanstack/react-table'
+
+// type Person = {
+//   firstName: string
+//   lastName: string
+//   age: number
+//   visits: number
+//   status: string
+//   progress: number
+// }
+
+const defaultData = [ // Person[]
+  {
+    firstName: 'tanner',
+    lastName: 'linsley',
+    age: 24,
+    visits: 100,
+    status: 'In Relationship',
+    progress: 50,
+  },
+  {
+    firstName: 'tandy',
+    lastName: 'miller',
+    age: 40,
+    visits: 40,
+    status: 'Single',
+    progress: 80,
+  },
+  {
+    firstName: 'joe',
+    lastName: 'dirte',
+    age: 45,
+    visits: 20,
+    status: 'Complicated',
+    progress: 10,
+  },
+]
+
+const columnHelper = createColumnHelper()
+
+const columns = [
+  columnHelper.accessor('firstName', {
+    cell: info => info.getValue(),
+    footer: info => info.column.id,
+  }),
+  columnHelper.accessor(row => row.lastName, {
+    id: 'lastName',
+    cell: info => <i>{info.getValue()}</i>,
+    header: () => <span>Last Name</span>,
+    footer: info => info.column.id,
+  }),
+  columnHelper.accessor('age', {
+    header: () => 'Age',
+    cell: info => info.renderValue(),
+    footer: info => info.column.id,
+  }),
+  columnHelper.accessor('visits', {
+    header: () => <span>Visits</span>,
+    footer: info => info.column.id,
+  }),
+  columnHelper.accessor('status', {
+    header: 'Status',
+    footer: info => info.column.id,
+  }),
+  columnHelper.accessor('progress', {
+    header: 'Profile Progress',
+    footer: info => info.column.id,
+  }),
+]
+
 export default function Home() {
+  const [data, setData] = useState(() => [...defaultData])
+  const rerender = useReducer(() => ({}), {})[1]
+
+  const table = useReactTable({
+    data,
+    columns,
+    getCoreRowModel: getCoreRowModel(),
+  })
+
   return (
     <div className={styles.container}>
       <Head>
@@ -12,44 +98,51 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h2>Documentation &rarr;</h2>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h2>Learn &rarr;</h2>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/canary/examples"
-            className={styles.card}
-          >
-            <h2>Examples &rarr;</h2>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h2>Deploy &rarr;</h2>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
+          <table>
+            <thead>
+              {table.getHeaderGroups().map(headerGroup => (
+                <tr key={headerGroup.id}>
+                  {headerGroup.headers.map(header => (
+                    <th key={header.id}>
+                      {header.isPlaceholder
+                        ? null
+                        : flexRender(
+                            header.column.columnDef.header,
+                            header.getContext()
+                          )}
+                    </th>
+                  ))}
+                </tr>
+              ))}
+            </thead>
+            <tbody>
+              {table.getRowModel().rows.map(row => (
+                <tr key={row.id}>
+                  {row.getVisibleCells().map(cell => (
+                    <td key={cell.id}>
+                      {flexRender(cell.column.columnDef.cell, cell.getContext())}
+                    </td>
+                  ))}
+                </tr>
+              ))}
+            </tbody>
+            <tfoot>
+              {table.getFooterGroups().map(footerGroup => (
+                <tr key={footerGroup.id}>
+                  {footerGroup.headers.map(header => (
+                    <th key={header.id}>
+                      {header.isPlaceholder
+                        ? null
+                        : flexRender(
+                            header.column.columnDef.footer,
+                            header.getContext()
+                          )}
+                    </th>
+                  ))}
+                </tr>
+              ))}
+            </tfoot>
+          </table>
       </main>
 
       <footer className={styles.footer}>
