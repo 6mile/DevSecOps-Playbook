@@ -1,12 +1,15 @@
 # DevSecOps Playbook - Version 1.2 - August 2022
 This playbook will help you introduce effective DevSecOps practices in your company, regardless of size. We provide explicit guidance and actionable steps to introduce security controls, measure their effectiveness, and demonstrate value for money to your business leaders. Following this playbook will help teams build materially more secure applications, and that in the end, is the intent.
 
+I presented the DevSecOps Playbook at the OWASP Global AppSec Conference in November of 2022.  You can find find a PDF version of the slides presented [here](owasp_presentation_globalappsec2022_devsecops_playbook.pdf).
 
 ## Some background
 
 This playbook was inspired by several documents and I want to call them out here:
 
-The "Minimum Viable Secure Product", or [MVSP](https://mvsp.dev) is a project that I have profound respect for. The MVSP is a great way to determine how mature an organization's security practices are.
+The "Minimum Viable Secure Product", or [MVSP](https://mvsp.dev) is a project that tried to set a minimum baseline for what a company would need to achieve to be thought of as "secure".  The MVSP is a great way to determine how mature an organization's security practices are and should be used by any org as somewhere to start.
+
+OWASP has built a great document called the [Application Security Verification Standard (ASVS)](https://github.com/OWASP/ASVS).  This document is highly technical, and should be read by anyone that is interested in AppSec.  However, this document is not particularly prescriptive, and therefore needs to be translated to a discreet set of steps that a team can do, which is the intent with the DevSecOps Playbook. 
 
 Timo Pagel's amazing "DevSecOps Maturity Model" or [DSOMM](https://dsomm.timo-pagel.de/) is a project that I only found recently.  There is some overlap between the DSOMM and this document and you should definitely browse through the DSOMM and explore the different maturity levels.
 
