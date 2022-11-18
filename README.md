@@ -1,7 +1,7 @@
 # DevSecOps Playbook - Version 1.2 - August 2022
 This playbook will help you introduce effective DevSecOps practices in your company, regardless of size. We provide explicit guidance and actionable steps to introduce security controls, measure their effectiveness, and demonstrate value for money to your business leaders. Following this playbook will help teams build materially more secure applications, and that in the end, is the intent.
 
-I presented the DevSecOps Playbook at the OWASP Global AppSec Conference in November of 2022.  You can find find a PDF version of the slides presented [here](owasp_presentation_globalappsec2022_devsecops_playbook.pdf).
+I presented the DevSecOps Playbook at the OWASP Global AppSec Conference in November of 2022.  You can find find a PDF version of the slides presented [here](images/owasp_presentation_globalappsec2022_devsecops_playbook.pdf).
 
 ## Some background
 
@@ -36,7 +36,7 @@ We want to secure our applications, from cradle to grave. To do this, we have cr
 
 We use two rating systems:  **Priority** indicates the order you should implement controls and **Difficulty** indicates how hard implementation is for this control.
 
-![DevSecOps Continuous Improvement](devsecops-loop-securestack-final-1280x640.png)
+![DevSecOps Continuous Improvement](images/devsecops-loop-securestack-final-1280x640.png)
 
 # The Playbook
 
@@ -133,7 +133,7 @@ People don't deploy applications, organizations do.  Some steps in the DevSecOps
 | 5.6 | Vulnerability Disclosure | 1 | Create and publish a set of procedures to let people contact you when they find security issues in your app | <span style="color: green">Easy</span> | <ul><li>CIS8</li><li>ISM GSD</li><li>SSDF1.1</li></ul> |
 | 5.7 | Bug Bounty | 3 | Setup a bug bounty program to incentivize security researchers to tell you about vulnerabilities they find | <span style="color: orange">Medium</span> | <ul><li>CIS8</li><li>ISM GSD</li><li>NIST 800-53B</li><li>SSDF1.1</li></ul> |
 
-![DevSecOps Continuous Improvement](devsecops-controls.jpg)
+![DevSecOps Continuous Improvement](images/devsecops-controls.jpg)
 
 <h2 id="compliance">Compliance - Security Framework Reference Material</h2> 
 
