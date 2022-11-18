@@ -13,8 +13,6 @@ OWASP has built a great document called the [Application Security Verification S
 
 Timo Pagel's amazing "DevSecOps Maturity Model" or [DSOMM](https://dsomm.timo-pagel.de/) is a project that I only found recently.  There is some overlap between the DSOMM and this document and you should definitely browse through the DSOMM and explore the different maturity levels.
 
-Finally, CIS has created a new document...
-
 ## Sponsors 
 Sponsored with 💜  by
 
