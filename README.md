@@ -74,6 +74,7 @@ Most companies now store their source code in cloud based repositories like GitH
 | 2.9 | Peer Reviews | 1 | Enforce peer reviews by software engineers colleagues to increase code quality and security | <span style="color: green">Easy</span> | <ul><li>APRA234</li><li>CIS8</li><li>ISO27001</li><li>NIST 800-53B</li><li>SSDF1.1</li></ul> |
 | 2.10 | CODEOWNERS | 1 | Create a CODEOWNERS file in the repository that identifies people and teams that own specific parts of the repository and should be consulted via PR when those parts of the repo are modified. | <span style="color: green">Easy</span> | <ul><li>APRA234</li><li>CIS8</li><li>ISO27001</li><li>NIST 800-53B</li><li>SSDF1.1</li></ul> |
 | 2.11 | SECURITY.md | 1 | Create a SECURITY.md file in your repository that explains who to contact if you find a security issue in the application | <span style="color: green">Easy</span> | <ul><li>APRA234</li><li>CIS8</li><li>ISO27001</li><li>NIST 800-53B</li><li>SSDF1.1</li></ul> |
+| 2.12 | .github repository | 2 | Create a .github repository in your GitHub Organization and add your standard boilerplate SECURITY.md, CONTRIBUTING.md, and other files here.  They will be used by any repositories that don't have their own. | <span style="color: green">Easy</span> | <ul><li>APRA234</li><li>CIS8</li><li>ISO27001</li><li>NIST 800-53B</li><li>SSDF1.1</li></ul> |
 
 <h2 id="cicd">CI/CD Pipelines and Automation</h2>
 
@@ -132,6 +133,7 @@ People don't deploy applications, organizations do.  Some steps in the DevSecOps
 | 5.5 | Sovereignty | 1 | Require that all code is written in, stored in, or otherwise served from a location and/or sovereignty that aligns with your org's requirements | <span style="color: orange">Medium</span> | <ul><li>ISM GCSR</li><li>ISO27001</li></ul> |
 | 5.6 | Vulnerability Disclosure | 1 | Create and publish a set of procedures to let people contact you when they find security issues in your app | <span style="color: green">Easy</span> | <ul><li>CIS8</li><li>ISM GSD</li><li>SSDF1.1</li></ul> |
 | 5.7 | Bug Bounty | 3 | Setup a bug bounty program to incentivize security researchers to tell you about vulnerabilities they find | <span style="color: orange">Medium</span> | <ul><li>CIS8</li><li>ISM GSD</li><li>NIST 800-53B</li><li>SSDF1.1</li></ul> |
+| 5.8 | Licensing | 3 | Track licensing of all software that your organizations uses or depends on.  Utilize a license tracking solution to enable searching for license types | <span style="color: red">Difficult</span> | <ul><li>?</li></ul> |
 
 ![DevSecOps Continuous Improvement](images/devsecops-controls.jpg)
 
