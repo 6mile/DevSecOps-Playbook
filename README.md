@@ -14,16 +14,14 @@ OWASP has built a great document called the [Application Security Verification S
 Timo Pagel's amazing "DevSecOps Maturity Model" or [DSOMM](https://dsomm.timo-pagel.de/) is a project that I only found recently.  There is some overlap between the DSOMM and this document and you should definitely browse through the DSOMM and explore the different maturity levels.
 
 ## Sponsors 
-Sponsored with 💜  by
-
-<a href="https://securestack.com" target=”_blank” rel="noopener noreferrer"><center><img src="https://securestack.com/wp-content/uploads/2021/09/securestack-horizontal.png" width="500"/></center></a>
+Sponsored with 💜  by <a href="https://securestack.com" target=”_blank” rel="noopener noreferrer"><center><img src="https://securestack.com/wp-content/uploads/2021/09/securestack-horizontal.png" width="400"/></center></a>
 
 
 ## Shift Left
 
 All companies and applications are unique. Blanket statements like "Shift Left" aren't helpful without context. Enterprises and startups have different tech stacks, funding, workforces, regulation, and more. Context matters, and this document provides a roadmap to use your context to determine your next DevSecOps destination.
 
-We want to secure our applications, from cradle to grave. To do this, we have created five "domains" that cover the lifecycle of a software application. There are a total of 58 "controls" or "functions" in the DevSecOps Playbook that are spread evenly across those five domains.  We've also added a Compliance Addendum for anyone that is interested in aligning with a specific compliance framework.
+We want to secure our applications, from cradle to grave. To do this, we have created five "domains" that cover the lifecycle of a software application. There are a total of 60 "tasks" in the DevSecOps Playbook that are spread across those five domains.  We've also added a Compliance Addendum for anyone that is interested in aligning with a specific compliance framework.
 
 * [Development Environment](#development)
 * [Source Code Management](#scm)
