@@ -14,16 +14,14 @@ OWASP has built a great document called the [Application Security Verification S
 Timo Pagel's amazing "DevSecOps Maturity Model" or [DSOMM](https://dsomm.timo-pagel.de/) is a project that I only found recently.  There is some overlap between the DSOMM and this document and you should definitely browse through the DSOMM and explore the different maturity levels.
 
 ## Sponsors 
-Sponsored with 💜  by
-
-<a href="https://securestack.com" target=”_blank” rel="noopener noreferrer"><center><img src="https://securestack.com/wp-content/uploads/2021/09/securestack-horizontal.png" width="500"/></center></a>
+Sponsored with 💜  by <a href="https://securestack.com" target=”_blank” rel="noopener noreferrer"><center><img src="https://securestack.com/wp-content/uploads/2021/09/securestack-horizontal.png" width="400"/></center></a>
 
 
 ## Shift Left
 
 All companies and applications are unique. Blanket statements like "Shift Left" aren't helpful without context. Enterprises and startups have different tech stacks, funding, workforces, regulation, and more. Context matters, and this document provides a roadmap to use your context to determine your next DevSecOps destination.
 
-We want to secure our applications, from cradle to grave. To do this, we have created five "domains" that cover the lifecycle of a software application. There are a total of 58 "controls" or "functions" in the DevSecOps Playbook that are spread evenly across those five domains.  We've also added a Compliance Addendum for anyone that is interested in aligning with a specific compliance framework.
+We want to secure our applications, from cradle to grave. To do this, we have created five "domains" that cover the lifecycle of a software application. There are a total of 60 "tasks" in the DevSecOps Playbook that are spread across those five domains.  We've also added a Compliance Addendum for anyone that is interested in aligning with a specific compliance framework.
 
 * [Development Environment](#development)
 * [Source Code Management](#scm)
@@ -119,6 +117,7 @@ Applications are deployed somewhere whether that's an AWS Lambda, S3 bucket or s
 | 4.17 | Cloud Security Posture | 2 | If your application is deployed in the cloud or uses cloud native services then a solution should be employed to verify that those cloud resources are secure and follow best practices | <span style="color: orange">Medium</span> | <ul><li>CIS8</li><li>NIST 800-53B</li><li>SSDF1.1</li></ul> |
 | 4.18 | Centralized Container Analysis | 2 | Scan any containers built for deployment for vulnerabilities | <span style="color: green">Easy</span> | <ul><li>APRA234</li><li>CIS8</li><li>ISM GSD</li><li>ISO27001</li><li>NIST 800-53.2a</li><li>SSDF1.1</li><li>DSOMM: Build</li><ul><li> Level 2: Building and test of artifacts in virtual environments</li></ul></ul> |
 | 4.19 | IaC | 2 | Use infrastructure as code to build all application environments | <span style="color: orange">Medium</span> | <ul><li>CIS8</li><li>ISM GSM</li><li>ISM GOSH</li><li>SSDF1.1</li><li>DSOMM: Infrastructure Hardening</li><ul><li> Level 3: Infrastructure as Code</li></ul></ul> |
+| 4.20 | TLS 1.3 | 1 | Use TLS 1.3 instead of earlier versions.  TLS 1.2 is still okay, but you should enable 1.3 soon as its more secure than any of the earlier versions. | <span style="color: orange">Easy</span> | <ul><li>APRA234</li><li>CIS8</li><li>ISM GSD</li><li>ISO27001</li><li>NIST 800-53B</li><li>SSDF1.1</li></ul> |
 
 <h2 id="org">Organizational Techniques</h2>
 
@@ -134,6 +133,7 @@ People don't deploy applications, organizations do.  Some steps in the DevSecOps
 | 5.6 | Vulnerability Disclosure | 1 | Create and publish a set of procedures to let people contact you when they find security issues in your app | <span style="color: green">Easy</span> | <ul><li>CIS8</li><li>ISM GSD</li><li>SSDF1.1</li></ul> |
 | 5.7 | Bug Bounty | 3 | Setup a bug bounty program to incentivize security researchers to tell you about vulnerabilities they find | <span style="color: orange">Medium</span> | <ul><li>CIS8</li><li>ISM GSD</li><li>NIST 800-53B</li><li>SSDF1.1</li></ul> |
 | 5.8 | Licensing | 3 | Track licensing of all software that your organizations uses or depends on.  Utilize a license tracking solution to enable searching for license types | <span style="color: red">Difficult</span> | <ul><li>?</li></ul> |
+| 5.9 | Vulnerability Aggregation and Management | 2 | Implement a system that aggregates vulnerability data from multiple tools and allows teams to prioritize, collaborate on, and manage the lifecycle of said vulnerabilities | <span style="color: orange">Medium</span> | <ul><li>CIS8</li><li>ISM GSD</li><li>SSDF1.1</li></ul> |
 
 ![DevSecOps Continuous Improvement](images/devsecops-controls.jpg)
 
