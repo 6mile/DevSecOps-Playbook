@@ -199,7 +199,7 @@ Coupled with the DevSecOps Playbook here, you can chart a "default" path and vis
 You can find the work here: https://github.com/wurstbrot/DevSecOps-MaturityModel  
 
 ### OWASP Top 10
-The OWASP Top 10 is quite possibly the most recognized application security standard out there.  It represents a really broad consensus about what are the most critical web application security risks.  Mapping the DevSecOps Playbook to the OWASP Top 10 was a challenge as the former is a list of tasks that you can perform and the latter is a way to classify findings from a webapplication security test.  However, when viewed through the lens of "if you don't do this task, you are susceptible to this risk" we found it relatively easy to align the two documents.
+The OWASP Top 10 is quite possibly the most recognized application security standard out there.  It represents a really broad consensus about what are the most critical web application security risks.  Mapping the DevSecOps Playbook to the OWASP Top 10 was a challenge as the former is a list of tasks that you can perform and the latter is a way to classify findings from a web application security test.  However, when viewed through the lens of "if you don't do this task, you are susceptible to this risk" we found it relatively easy to align the two documents.
 
 ## What's been mapped so far?
 
