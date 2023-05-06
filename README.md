@@ -182,9 +182,9 @@ In late 2021 the ACSC released the "Guidelines for Software Development" (GSD). 
 You can find the GSD here:  https://www.cyber.gov.au/acsc/view-all-content/advice/guidelines-software-development  
 
 ### APRA CPG 234
-The Australian Prudential Regulation Authority (APRA) is part of the Australian government and is charged with regulating the financial industry. It published the "Prudential Standard CPS 234" document in 2019 which outlines high level information security requirements. 
+The Australian Prudential Regulation Authority (APRA) is part of the Australian government and is charged with regulating the financial sector. It published the "Prudential Practice Guide CPG 234" document in 2019 which outlines high level information security guidelines for regulated entities.
 
-This document is organized in an unusual way with 8 "attachments" at the end of the doc.  It is in these attachments that the security controls and expectations are laid out. You can find the APRA 234 document at https://www.apra.gov.au/sites/default/files/cpg_234_information_security_june_2019_0.pdf.   
+This document is organized in an unusual way with 8 "attachments" at the end of the doc. It is in these attachments that detailed guidance and examples for a given domain are laid out (Attachment D covers software security). You can find the APRA CPG 234 document at https://www.apra.gov.au/sites/default/files/cpg_234_information_security_june_2019_0.pdf.
 
 ### ISO27001 Annex A.14: System Acquisition, Development & Maintenance
 ISO27001 is an international standard on how to manage information security. It measures the maturity of an organization with a total of 114 controls spread across 14 groupings. ISO27001 is built on the principle of gathering the documentation around these security controls in an information security management system (ISMS).
