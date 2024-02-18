@@ -42,7 +42,7 @@ We use two rating systems:  **Priority** indicates the order you should implemen
 
 The developer's laptop is where most of the magic happens, but also where most of the problems are introduced.  If you want to shift as far left as you can this is where you want to land much of your embedded security.
 
-| Control | Name | Priority | Description | Difficulty | Maps to security frameworks 
+| Task | Name | Priority | Description | Difficulty | Maps to security frameworks 
 | :--- | :---        | :---   | :--- | :---    | :---    
 | 1.1 | Secure Code Training | 2 | Developers who receive Secure Code Training are less likely to introduce security bugs, be aware of tooling that can support them, and design systems with security in mind. | <span style="color: orange">Medium</span> | <ul><li>CIS8</li><li>APRA234</li><li>NIST 800-53B</li><li>SSDF1.1</li><li>ISO27001</li><li>DSOMM: Education and  Guidance</li><ul><li> Level 1: Ad-Hoc Security trainings for software developers</li><li> Level 2: Regular security training for all</li></ul></ul> | 
 1.2 | Source Code Versioning | 1 | Version Control Systems introduce peer review processes, an auditable history, and consistent work patterns between software engineers.  | <span style="color: green">Easy</span> | <ul><li>APRA234</li><li>CIS8</li><li>ISM GSD</li><li>ISO27001</li><li>NIST 800-53B</li><li>SSDF1.1</li><li>DSOMM: Development and Source Control</li><ul><li> Level 1: Versioning</li></ul></ul> |
@@ -59,7 +59,7 @@ The developer's laptop is where most of the magic happens, but also where most o
 
 Most companies now store their source code in cloud based repositories like GitHub, Bitbucket or Gitlab.  Even if you don't, you will use a centralized place for your software engineers to store their code.  Centralization and versioning means that these developers can work together without (mostly) stepping on each others toes.  Joe and Molly can both be working on the same component, file or function but their changes won't necessarily break the other one's changes. SCM is also a GREAT place to deploy security functions like server side git hooks and multi-factor authentication for your developers!
 
-| Control | Name | Priority | Description | Difficulty | Maps to security frameworks | 
+| Task | Name | Priority | Description | Difficulty | Maps to security frameworks | 
 | :--- | :---        | :---   | :--- | :---    | :---     
 | 2.1 | Source Code Management | 1 | Use a centralized source code management (SCM) system like Bitbucket, GitHub or Gitlab | <span style="color: green">Easy</span> | <ul><li>APRA234</li><li>CIS8</li><li>ISM GSD</li><li>ISO27001</li><li>NIST 800-53B</li><li>SSDF1.1</li></ul> | 
 | 2.2 | User Roles | 1 | Create unique user and team roles so that access to source code can be tailored | <span style="color: green">Easy</span> | <ul><li>APRA234</li><li>CIS8</li><li>ISM GSD</li><li>NIST 800-53B</li><li>SSDF1.1</li></ul> |
@@ -78,7 +78,7 @@ Most companies now store their source code in cloud based repositories like GitH
 
 Modern web applications are built using modern continuous integration and deployment processes.  This means that you run tests specific to whatever environment you are pushing to whether that's DEV, STAGING or PROD.
 
-| Control | Name | Priority | Description | Difficulty | Maps to security frameworks |
+| Task | Name | Priority | Description | Difficulty | Maps to security frameworks |
 | :--- | :---        | :---   | :--- | :---    | :---    |
 | 3.1 | CI/CD Pipeline | 1 |Implement a CI/CD pipeline | <span style="color: orange">Medium</span> | <ul><li>APRA234</li><li>CIS8</li><li>ISM GSD</li><li>ISO27001</li><li>SSDF1.1</li><li>DSOMM: Build</li><ul><li> Level 1: Defined build process</li></ul><li>DSOMM: Deploy</li><ul><li> Level 1: Defined deployment process</li></ul></ul> |
 | 3.2 | Application Environments | 2 | Create separate environments for dev, staging and prod, and treat each as independent with its own data, testing and requirements | <span style="color: orange">Medium</span> | <ul><li>CIS8</li><li>ISM GSD</li><li>ISO27001</li><li>SSDF1.1</li><li>DSOMM: Infrastructure Hardening</li><ul><li> Level 1: Usage of test and production environments</li></ul></ul> |
@@ -96,7 +96,7 @@ Modern web applications are built using modern continuous integration and deploy
 
 Applications are deployed somewhere whether that's an AWS Lambda, S3 bucket or some old crusty server in the corner of the server room.  In any case, DevSecOps best practices mean that you need to include that deployment location in your processes.  
 
-| Control | Name | Priority | Description | Difficulty | Maps to security frameworks |
+| Task | Name | Priority | Description | Difficulty | Maps to security frameworks |
 | :--- | :---        | :---   | :--- | :---    | :---    |
 | 4.1 | Valid SSL Certificate | 1 | Create and use a valid SSL certificate for each application URL, or implement a wildcard cert | <span style="color: orange">Easy</span> | <ul><li>APRA234</li><li>CIS8</li><li>ISM GSD</li><li>ISO27001</li><li>NIST 800-53B</li><li>SSDF1.1</li></ul> |
 | 4.2 | Encrypt Traffic | 1 | Encrypt all traffic that's public facing | <span style="color: orange">Medium</span> | <ul><li>APRA234</li><li>CIS8</li><li>CIS8</li><li>ISM GSD</li><li>ISO27001</li><li>NIST 800-53B</li><li>SSDF1.1</li><li>DSOMM: Infrastructure Hardening</li><ul><li> Level 1: Usage of edge encryption at transit</li></ul></ul> |
@@ -123,7 +123,7 @@ Applications are deployed somewhere whether that's an AWS Lambda, S3 bucket or s
 
 People don't deploy applications, organizations do.  Some steps in the DevSecOps playbook need to be owned by the Organization itself.  
 
-| Control | Name | Priority | Description | Difficulty | Maps to security frameworks |
+| Task | Name | Priority | Description | Difficulty | Maps to security frameworks |
 | :--- | :---        | :---   | :--- | :---    | :---    |
 | 5.1 | Penetration Testing | 2 | Have your application pentested regularly | <span style="color: orange">Medium</span> | <ul><li>CIS8</li><li>ISM GSD</li><li>NIST 800-53B</li><li>SSDF1.1</li></ul> |
 | 5.2 | Threat Modeling | 3 |  Build a collaborative way for developers and security staff to understand the threat landscape for an individual application | <span style="color: red">Difficult</span> | <ul><li>CIS8</li><li>ISM GSD</li><li>NIST 800-53B</li><li>SSDF1.1</li><li>DSOMM: Designing</li><ul><li> Levels 1 - 4</li></ul></ul> |
