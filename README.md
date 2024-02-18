@@ -1,4 +1,4 @@
-# DevSecOps Playbook - Version 1.3 - December 2022
+# DevSecOps Playbook - Version 1.3.1 - February 2024
 This playbook will help you introduce effective DevSecOps practices in your company, regardless of size. We provide explicit guidance and actionable steps to introduce security controls, measure their effectiveness, and demonstrate value for money to your business leaders. Following this playbook will help teams build materially more secure applications, and that in the end, is the intent.
 
 I presented the DevSecOps Playbook at the OWASP Global AppSec Conference in November of 2022.  You can find find a PDF version of the slides presented [here](images/owasp_presentation_globalappsec2022_devsecops_playbook.pdf).
