@@ -7,7 +7,7 @@ import {
   useReactTable,
 } from '@tanstack/react-table'
 
-const SCM = () => {
+const CICD = () => {
     const cicd = [
         {
             control: "3.1",
@@ -212,4 +212,4 @@ const SCM = () => {
     );
 };
 
-export default SCM;
+export default CICD;
