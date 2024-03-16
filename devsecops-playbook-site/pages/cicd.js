@@ -8,88 +8,96 @@ import {
 } from '@tanstack/react-table'
 
 const SCM = () => {
-    const scm = [
+    const cicd = [
         {
-            control: "1.1",
-            name: "Secure Code Training",
-            priority: "2",
-            description: "Developers who receive Secure Code Training are less likely to introduce security bugs, be aware of tooling that can support them, and design systems with security in mind.",
+            control: "3.1",
+            name: "CI/CD Pipeline",
+            priority: "1",
+            description: "Implement a CI/CD pipeline",
             difficulty: "<span style=\"color: orange\">Medium</span>",
-            securityFrameworks: "<ul><li>CIS8</li><li>APRA234</li><li>NIST 800-53B</li><li>SSDF1.1</li></ul>"
+            securityFrameworks: "<ul><li>APRA234</li><li>CIS8</li><li>ISM GSD</li><li>ISO27001</li><li>SSDF1.1</li></ul>"
         },
         {
-            control: "1.2",
-            name: "Source Code Versioning",
-            priority: "1",
-            description: "Version Control Systems introduce peer review processes, an auditable history, and consistent work patterns between software engineers.",
-            difficulty: "<span style=\"color: green\">Easy</span>",
-            securityFrameworks: "<ul><li>APRA234</li><li>CIS8</li><li>ISM GSD</li><li>ISO27001</li><li>NIST 800-53B</li><li>SSDF1.1</li></ul>"
-        },
-        {
-            control: "1.3",
-            name: ".gitignore",
-            priority: "1",
-            description: ".gitignore files help prevent accidental commits of sensitive, debug, or workstation specific data",
-            difficulty: "<span style=\"color: green\">Easy</span>",
-            securityFrameworks: "<ul><li>APRA234</li><li>CIS8</li><li>NIST 800-53B</li><li>SSDF1.1</li></ul>"
-        },
-        {
-            control: "1.4",
-            name: "Pre-Commit Hook Scans",
+            control: "3.2",
+            name: "Application Environments",
             priority: "2",
-            description: "A Pre-Commit Hook for security scans provides timely feedback to engineers and helps to prevent vulnerable code being introduced to a repository",
-            difficulty: "<span style=\"color: green\">Easy</span>",
-            securityFrameworks: "<ul><li>APRA234</li><li>CIS8</li><li>NIST 800-53B</li><li>SSDF1.1</li></ul>"
+            description: "Create separate environments for dev, staging and prod, and treat each as independent with its own data, testing and requirements",
+            difficulty: "<span style=\"color: orange\">Medium</span>",
+            securityFrameworks: "<ul><li>CIS8</li><li>ISM GSD</li><li>ISO27001</li><li>SSDF1.1</li></ul>"
         },
         {
-            control: "1.5",
-            name: "Commit Signing",
-            priority: "2",
-            description: "Sign all commits to verify that the author is genuine",
-            difficulty: "<span style=\"color: green\">Easy</span>",
-            securityFrameworks: "<ul><li>APRA234</li><li>CIS8</li><li>NIST 800-53B</li><li>SSDF1.1</li></ul>"
-        },
-        {
-            control: "1.6",
-            name: "IDE plugins",
-            priority: "2",
-            description: "Most IDE's support the use of third-party plugins, and devs should implement these tools to highlight security issues as they happen in realtime while they are programming.",
-            difficulty: "<span style=\"color: green\">Easy</span>",
-            securityFrameworks: "<ul><li>APRA234</li><li>CIS8</li><li>NIST 800-53B</li><li>SSDF1.1</li></ul>"
-        },
-        {
-            control: "1.7",
-            name: "Local Software Composition Analysis",
-            priority: "1",
-            description: "Helps you find and fix libraries with known security issues",
-            difficulty: "<span style=\"color: green\">Easy</span>",
-            securityFrameworks: "<ul><li>APRA234</li><li>CIS8</li><li>ISM GSD</li><li>ISO27001</li><li>NIST 800-53B</li><li>SSDF1.1</li></ul>"
-        },
-        {
-            control: "1.8",
-            name: "Local Static Code Analysis",
-            priority: "2",
-            description: "Helps you find and fix security vulnerabilities in your source code",
-            difficulty: "<span style=\"color: green\">Easy</span>",
-            securityFrameworks: "<ul><li>APRA234</li><li>CIS8</li><li>ISM GSD</li><li>ISO27001</li><li>NIST 800-53B</li><li>SSDF1.1</li></ul>"
-        },
-        {
-            control: "1.9",
-            name: "Local Sensitive Data Analysis",
-            priority: "1",
-            description: "Audits your repository for secrets, credentials, API keys and similar in dev environment. Secrets stored in source code are visible to other people",
-            difficulty: "<span style=\"color: green\">Easy</span>",
-            securityFrameworks: "<ul><li>APRA234</li><li>CIS8</li><li>ISM GSD</li><li>ISO27001</li><li>NIST 800-53B</li><li>SSDF1.1</li></ul>"
-        },
-        {
-            control: "1.10",
-            name: "Application Baseline",
+            control: "3.3",
+            name: "Application Data Separation",
             priority: "3",
-            description: "Create a \"recipe\" for building the application from ground up that takes into consideration its risk and compliance requirements, data sensitivity, stakeholders and relationships with other systems, as well as its technical components.",
-            difficulty: "<span style=\"color: orange\">Medium</span>",
-            securityFrameworks: "<ul><li>APRA234</li><li>CIS8</li><li>ISM GSD</li><li>NIST 800-53B</li><li>SSDF1.1</li></ul>"
+            description: "Make sure that dev and test environments are **not** using the same data as production. If the use of live data is required then make sure that data is anonymized.",
+            difficulty: "<span style=\"color: red\">Difficult</span>",
+            securityFrameworks: "<ul><li>CIS8</li><li>ISM GSD</li><li>ISO27001</li><li>SSDF1.1</li></ul>"
         },
-      ];
+        {
+            control: "3.4",
+            name: "CI/CD Administration",
+            priority: "3",
+            description: "Create and enforce user or team roles so that only the appropriate people can change or disable tests and deployment requirements",
+            difficulty: "<span style=\"color: orange\">Medium</span>",
+            securityFrameworks: "<ul><li>CIS8</li><li>ISM GSD</li><li>ISO27001</li><li>SSDF1.1</li></ul>"
+        },
+        {
+            control: "3.5",
+            name: "Credential Store",
+            priority: "1",
+            description: "Create a secure encrypted place to store senstive credentials like passwords, API keys, etc.",
+            difficulty: "<span style=\"color: orange\">Medium</span>",
+            securityFrameworks: "<ul><li>APRA234</li><li>CIS8</li><li>ISM GSD</li><li>NIST 800-53.2b</li><li>SSDF1.1</li></ul>"
+        },
+        {
+            control: "3.6",
+            name: "Centralized Software Composition Analysis",
+            priority: "1",
+            description: "Scan source code for vulnerable libraries and open source software from within a CD stage",
+            difficulty: "<span style=\"color: green\">Easy</span>",
+            securityFrameworks: "<ul><li>APRA234</li><li>CIS8</li><li>ISM GSD</li><li>ISO27001</li><li>NIST 800-53.2a</li><li>SSDF1.1</li></ul>"
+        },
+        {
+            control: "3.7",
+            name: "Centralized Static Code Analysis",
+            priority: "2",
+            description: "Scan source code for vulnerabilities in the source code itself from within a CD stage",
+            difficulty: "<span style=\"color: green\">Easy</span>",
+            securityFrameworks: "<ul><li>APRA234</li><li>CIS8</li><li>ISM GSD</li><li>ISO27001</li><li>NIST 800-53.2b</li><li>SSDF1.1</li></ul>"
+        },
+        {
+            control: "3.8",
+            name: "Centralized Sensitive Data Analysis",
+            priority: "2",
+            description: "Scan source code for secrets, credentials, API keys and similar from within a CD stage",
+            difficulty: "<span style=\"color: green\">Easy</span>",
+            securityFrameworks: "<ul><li>APRA234</li><li>CIS8</li><li>ISM GSD</li><li>ISO27001</li><li>NIST 800-53B</li><li>SSDF1.1</li></ul>"
+        },
+        {
+            control: "3.9",
+            name: "DAST",
+            priority: "3",
+            description: "Scan running application for vulnerabilities",
+            difficulty: "<span style=\"color: orange\">Medium</span>",
+            securityFrameworks: "<ul><li>CIS8</li><li>ISM GSD</li><li>ISO27001</li><li>NIST 800-53B</li><li>NIST 800-53B</li><li>SSDF1.1</li></ul>"
+        },
+        {
+            control: "3.10",
+            name: "Transient Test Compute",
+            priority: "2",
+            description: "Verify that the compute you use in CI/CD pipelines are up to date and using most recent applications and operating systems",
+            difficulty: "<span style=\"color: orange\">Medium</span>",
+            securityFrameworks: "<ul><li>CIS8</li><li>ISM GSD</li><li>ISO27001<li>SSDF1.1</li></ul>"
+        },
+        {
+            control: "3.11",
+            name: "Harden Transient Compute",
+            priority: "3",
+            description: "Harden the transient compute you are using in your pipelines. Follow CIS guidelines for container hardening.",
+            difficulty: "<span style=\"color: red\">Difficult</span>",
+            securityFrameworks: "<ul><li>CIS8</li><li>ISM GSM</li><li>ISM GOSH</li><li>SSDF1.1</li></ul>"
+        },
+    ];
     
     const columnHelper = createColumnHelper()
     const columns = [
@@ -135,7 +143,7 @@ const SCM = () => {
         }),
       ];
     
-    const [data, setData] = useState(() => [...scm]);
+    const [data, setData] = useState(() => [...cicd]);
 
     const table = useReactTable({
         data,
@@ -145,7 +153,13 @@ const SCM = () => {
 
     return (
         <>
-            <h2>Source Code Management (SCM)</h2>
+            <h2>CI/CD Pipelines and Automation (CI/CD)</h2>
+
+            <p>
+                Modern web applications are built using modern continuous integration and deployment processes. 
+                This means that you run tests specific to whatever environment you are pushing to whether that's DEV, 
+                STAGING or PROD.
+            </p>
 
             <div>
                 <table>
