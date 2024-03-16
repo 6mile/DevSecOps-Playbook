@@ -14,56 +14,56 @@ const OrgTech = () => {
             name: "Penetration Testing",
             priority: "2",
             description: "Have your application pentested regularly",
-            difficulty: "<span style=\"color: orange\">Medium</span>",
-            securityFrameworks: "<ul><li>CIS8</li><li>ISM GSD</li><li>NIST 800-53B</li><li>SSDF1.1</li></ul>"
+            difficulty: "Medium",
+            securityFrameworks: "CIS8, ISM GSD, NIST 800-53B, SSDF1.1"
         },
         {
             control: "5.2",
             name: "Threat Modeling",
             priority: "3",
             description: "Build a collaborative way for developers and security staff to understand the threat landscape for an individual application",
-            difficulty: "<span style=\"color: red\">Difficult</span>",
-            securityFrameworks: "<ul><li>CIS8</li><li>ISM GSD</li><li>NIST 800-53B</li><li>SSDF1.1</li></ul>"
+            difficulty: "Difficult",
+            securityFrameworks: "CIS8, ISM GSD, NIST 800-53B, SSDF1.1"
         },
         {
             control: "5.3",
             name: "SIEM",
             priority: "3",
             description: "Implement a SIEM and send all application, system and cloud logs to it",
-            difficulty: "<span style=\"color: red\">Difficult</span>",
-            securityFrameworks: "<ul><li>CIS8</li><li>NIST 800-53B</li><li>SSDF1.1</li></ul>"
+            difficulty: "Difficult",
+            securityFrameworks: "CIS8, NIST 800-53B, SSDF1.1"
         },
         {
             control: "5.4",
             name: "Attack Surface Management",
             priority: "1",
             description: "Identify public facing resources via automation",
-            difficulty: "<span style=\"color: green\">Easy</span>",
-            securityFrameworks: "<ul><li>CIS8</li><li>CIS8</li><li>NIST 800-53B</li><li>SSDF1.1</li></ul>"
+            difficulty: "Easy",
+            securityFrameworks: "CIS8, NIST 800-53B, SSDF1.1"
         },
         {
             control: "5.5",
             name: "Sovereignty",
             priority: "1",
             description: "Require that all code is written in, stored in, or otherwise served from a location and/or sovereignty that aligns with your org's requirements",
-            difficulty: "<span style=\"color: orange\">Medium</span>",
-            securityFrameworks: "<ul><li>ISM GCSR</li><li>ISO27001</li></ul>"
+            difficulty: "Medium",
+            securityFrameworks: "ISM GCSR, ISO27001"
         },
         {
             control: "5.6",
             name: "Vulnerability Disclosure",
             priority: "1",
             description: "Create and publish a set of procedures to let people contact you when they find security issues in your app",
-            difficulty: "<span style=\"color: green\">Easy</span>",
-            securityFrameworks: "<ul><li>CIS8</li><li>ISM GSD</li><li>SSDF1.1</li></ul>"
+            difficulty: "Easy",
+            securityFrameworks: "CIS8, ISM GSD, SSDF1.1"
         },
         {
             control: "5.7",
             name: "Bug Bounty",
             priority: "3",
             description: "Setup a bug bounty program to incentivize security researchers to tell you about vulnerabilities they find",
-            difficulty: "<span style=\"color: orange\">Medium</span>",
-            securityFrameworks: "<ul><li>CIS8</li><li>ISM GSD</li><li>NIST 800-53B</li><li>SSDF1.1</li></ul>"
+            difficulty: "Medium",
+            securityFrameworks: "CIS8, ISM GSD, NIST 800-53B, SSDF1.1"
         },
     ]
     

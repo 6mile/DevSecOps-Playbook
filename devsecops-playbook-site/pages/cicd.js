@@ -14,88 +14,88 @@ const CICD = () => {
             name: "CI/CD Pipeline",
             priority: "1",
             description: "Implement a CI/CD pipeline",
-            difficulty: "<span style=\"color: orange\">Medium</span>",
-            securityFrameworks: "<ul><li>APRA234</li><li>CIS8</li><li>ISM GSD</li><li>ISO27001</li><li>SSDF1.1</li></ul>"
+            difficulty: "Medium",
+            securityFrameworks: "APRA234, CIS8, ISM GSD, ISO27001, SSDF1.1"
         },
         {
             control: "3.2",
             name: "Application Environments",
             priority: "2",
             description: "Create separate environments for dev, staging and prod, and treat each as independent with its own data, testing and requirements",
-            difficulty: "<span style=\"color: orange\">Medium</span>",
-            securityFrameworks: "<ul><li>CIS8</li><li>ISM GSD</li><li>ISO27001</li><li>SSDF1.1</li></ul>"
+            difficulty: "Medium",
+            securityFrameworks: "CIS8, ISM GSD, ISO27001, SSDF1.1"
         },
         {
             control: "3.3",
             name: "Application Data Separation",
             priority: "3",
             description: "Make sure that dev and test environments are **not** using the same data as production. If the use of live data is required then make sure that data is anonymized.",
-            difficulty: "<span style=\"color: red\">Difficult</span>",
-            securityFrameworks: "<ul><li>CIS8</li><li>ISM GSD</li><li>ISO27001</li><li>SSDF1.1</li></ul>"
+            difficulty: "Difficult",
+            securityFrameworks: "CIS8, ISM GSD, ISO27001, SSDF1.1"
         },
         {
             control: "3.4",
             name: "CI/CD Administration",
             priority: "3",
             description: "Create and enforce user or team roles so that only the appropriate people can change or disable tests and deployment requirements",
-            difficulty: "<span style=\"color: orange\">Medium</span>",
-            securityFrameworks: "<ul><li>CIS8</li><li>ISM GSD</li><li>ISO27001</li><li>SSDF1.1</li></ul>"
+            difficulty: "Medium",
+            securityFrameworks: "CIS8, ISM GSD, ISO27001, SSDF1.1"
         },
         {
             control: "3.5",
             name: "Credential Store",
             priority: "1",
             description: "Create a secure encrypted place to store senstive credentials like passwords, API keys, etc.",
-            difficulty: "<span style=\"color: orange\">Medium</span>",
-            securityFrameworks: "<ul><li>APRA234</li><li>CIS8</li><li>ISM GSD</li><li>NIST 800-53.2b</li><li>SSDF1.1</li></ul>"
+            difficulty: "Medium",
+            securityFrameworks: "APRA234, CIS8, ISM GSD, NIST 800-53.2b, SSDF1.1"
         },
         {
             control: "3.6",
             name: "Centralized Software Composition Analysis",
             priority: "1",
             description: "Scan source code for vulnerable libraries and open source software from within a CD stage",
-            difficulty: "<span style=\"color: green\">Easy</span>",
-            securityFrameworks: "<ul><li>APRA234</li><li>CIS8</li><li>ISM GSD</li><li>ISO27001</li><li>NIST 800-53.2a</li><li>SSDF1.1</li></ul>"
+            difficulty: "Easy",
+            securityFrameworks: "APRA234, CIS8, ISM GSD, ISO27001, NIST 800-53.2a, SSDF1.1"
         },
         {
             control: "3.7",
             name: "Centralized Static Code Analysis",
             priority: "2",
             description: "Scan source code for vulnerabilities in the source code itself from within a CD stage",
-            difficulty: "<span style=\"color: green\">Easy</span>",
-            securityFrameworks: "<ul><li>APRA234</li><li>CIS8</li><li>ISM GSD</li><li>ISO27001</li><li>NIST 800-53.2b</li><li>SSDF1.1</li></ul>"
+            difficulty: "Easy",
+            securityFrameworks: "APRA234, CIS8, ISM GSD, ISO27001, NIST 800-53.2b, SSDF1.1"
         },
         {
             control: "3.8",
             name: "Centralized Sensitive Data Analysis",
             priority: "2",
             description: "Scan source code for secrets, credentials, API keys and similar from within a CD stage",
-            difficulty: "<span style=\"color: green\">Easy</span>",
-            securityFrameworks: "<ul><li>APRA234</li><li>CIS8</li><li>ISM GSD</li><li>ISO27001</li><li>NIST 800-53B</li><li>SSDF1.1</li></ul>"
+            difficulty: "Easy",
+            securityFrameworks: "APRA234, CIS8, ISM GSD, ISO27001, NIST 800-53B, SSDF1.1"
         },
         {
             control: "3.9",
             name: "DAST",
             priority: "3",
             description: "Scan running application for vulnerabilities",
-            difficulty: "<span style=\"color: orange\">Medium</span>",
-            securityFrameworks: "<ul><li>CIS8</li><li>ISM GSD</li><li>ISO27001</li><li>NIST 800-53B</li><li>NIST 800-53B</li><li>SSDF1.1</li></ul>"
+            difficulty: "Medium",
+            securityFrameworks: "CIS8, ISM GSD, ISO27001, NIST 800-53B, NIST 800-53B, SSDF1.1"
         },
         {
             control: "3.10",
             name: "Transient Test Compute",
             priority: "2",
             description: "Verify that the compute you use in CI/CD pipelines are up to date and using most recent applications and operating systems",
-            difficulty: "<span style=\"color: orange\">Medium</span>",
-            securityFrameworks: "<ul><li>CIS8</li><li>ISM GSD</li><li>ISO27001<li>SSDF1.1</li></ul>"
+            difficulty: "Medium",
+            securityFrameworks: "CIS8, ISM GSD, ISO27001, SSDF1.1"
         },
         {
             control: "3.11",
             name: "Harden Transient Compute",
             priority: "3",
             description: "Harden the transient compute you are using in your pipelines. Follow CIS guidelines for container hardening.",
-            difficulty: "<span style=\"color: red\">Difficult</span>",
-            securityFrameworks: "<ul><li>CIS8</li><li>ISM GSM</li><li>ISM GOSH</li><li>SSDF1.1</li></ul>"
+            difficulty: "Difficult",
+            securityFrameworks: "CIS8, ISM GSM, ISM GOSH, SSDF1.1"
         },
     ];
     

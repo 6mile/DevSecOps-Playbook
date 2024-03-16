@@ -18,8 +18,8 @@ const developmentEnvironment = [
         name: "Secure Code Training",
         priority: "2",
         description: "Developers who receive Secure Code Training are less likely to introduce security bugs, be aware of tooling that can support them, and design systems with security in mind.",
-        difficulty: "<span style=\"color: orange\">Medium</span>",
-        securityFrameworks: "<ul><li>CIS8</li>APRA234<li>NIST 800-53B</li><li>SSDF1.1</li></ul>"
+        difficulty: "Medium",
+        securityFrameworks: "CIS8APRA234, NIST 800-53B, SSDF1.1"
     },
     {
         control: "1.2",
@@ -27,7 +27,7 @@ const developmentEnvironment = [
         priority: "1",
         description: "Version Control Systems introduce peer review processes, an auditable history, and consistent work patterns between software engineers.",
         difficulty: "Easy",
-        securityFrameworks: "<ul>APRA234<li>CIS8</li><li>ISM GSD</li><li>ISO27001</li><li>NIST 800-53B</li><li>SSDF1.1</li></ul>"
+        securityFrameworks: "APRA234CIS8, ISM GSD, ISO27001, NIST 800-53B, SSDF1.1"
     },
     {
         control: "1.3",
@@ -35,7 +35,7 @@ const developmentEnvironment = [
         priority: "1",
         description: ".gitignore files help prevent accidental commits of sensitive, debug, or workstation specific data",
         difficulty: "Easy",
-        securityFrameworks: "<ul>APRA234<li>CIS8</li><li>NIST 800-53B</li><li>SSDF1.1</li></ul>"
+        securityFrameworks: "APRA234CIS8, NIST 800-53B, SSDF1.1"
     },
     {
         control: "1.4",
@@ -43,7 +43,7 @@ const developmentEnvironment = [
         priority: "2",
         description: "A Pre-Commit Hook for security scans provides timely feedback to engineers and helps to prevent vulnerable code being introduced to a repository",
         difficulty: "Easy",
-        securityFrameworks: "<ul>APRA234<li>CIS8</li><li>NIST 800-53B</li><li>SSDF1.1</li></ul>"
+        securityFrameworks: "APRA234CIS8, NIST 800-53B, SSDF1.1"
     },
     {
         control: "1.5",
@@ -51,7 +51,7 @@ const developmentEnvironment = [
         priority: "2",
         description: "Sign all commits to verify that the author is genuine",
         difficulty: "Easy",
-        securityFrameworks: "<ul>APRA234<li>CIS8</li><li>NIST 800-53B</li><li>SSDF1.1</li></ul>"
+        securityFrameworks: "APRA234CIS8, NIST 800-53B, SSDF1.1"
     },
     {
         control: "1.6",
@@ -59,7 +59,7 @@ const developmentEnvironment = [
         priority: "2",
         description: "Most IDE's support the use of third-party plugins, and devs should implement these tools to highlight security issues as they happen in realtime while they are programming.",
         difficulty: "Easy",
-        securityFrameworks: "<ul>APRA234<li>CIS8</li><li>NIST 800-53B</li><li>SSDF1.1</li></ul>"
+        securityFrameworks: "APRA234CIS8, NIST 800-53B, SSDF1.1"
     },
     {
         control: "1.7",
@@ -67,7 +67,7 @@ const developmentEnvironment = [
         priority: "1",
         description: "Helps you find and fix libraries with known security issues",
         difficulty: "Easy",
-        securityFrameworks: "<ul>APRA234<li>CIS8</li><li>ISM GSD</li><li>ISO27001</li><li>NIST 800-53B</li><li>SSDF1.1</li></ul>"
+        securityFrameworks: "APRA234CIS8, ISM GSD, ISO27001, NIST 800-53B, SSDF1.1"
     },
     {
         control: "1.8",
@@ -75,7 +75,7 @@ const developmentEnvironment = [
         priority: "2",
         description: "Helps you find and fix security vulnerabilities in your source code",
         difficulty: "Easy",
-        securityFrameworks: "<ul>APRA234<li>CIS8</li><li>ISM GSD</li><li>ISO27001</li><li>NIST 800-53B</li><li>SSDF1.1</li></ul>"
+        securityFrameworks: "APRA234CIS8, ISM GSD, ISO27001, NIST 800-53B, SSDF1.1"
     },
     {
         control: "1.9",
@@ -83,7 +83,7 @@ const developmentEnvironment = [
         priority: "1",
         description: "Audits your repository for secrets, credentials, API keys and similar in dev environment. Secrets stored in source code are visible to other people",
         difficulty: "Easy",
-        securityFrameworks: "<ul>APRA234<li>CIS8</li><li>ISM GSD</li><li>ISO27001</li><li>NIST 800-53B</li><li>SSDF1.1</li></ul>"
+        securityFrameworks: "APRA234CIS8, ISM GSD, ISO27001, NIST 800-53B, SSDF1.1"
     },
     {
         control: "1.10",
