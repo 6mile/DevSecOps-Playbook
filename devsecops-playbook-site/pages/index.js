@@ -11,57 +11,7 @@ import {
   useReactTable,
 } from '@tanstack/react-table'
 
-// const developmentEnvironment = [
-//   {
-//     control: '1.1',
-//     name: 'Secure Code Training',
-//     priority: '2',
-//     description: 'Developers who receive Secure Code Training are less likely to introduce security bugs, be aware of tooling that can support them, and design systems with security in mind.',
-//     difficulty: 'Medium',
-//     securityFrameworks: ['CIS8, APRA234', 'NIST 800-53B', 'SSDF1.1']
-//   },
-//   {
-//     control: '1.2',
-//     name: 'Source Code Versioning',
-//     priority: '1',
-//     description: 'Version Control Systems introduce peer review processes, an auditable history, and consistent work patterns between software engineers.',
-//     difficulty: 'Easy',
-//     securityFrameworks: ['APRA234', 'CIS8', 'ISM GSD', 'ISO27001', 'NIST 800-53B', 'SSDF1.1']
-//   },
-//   {
-//     control: '1.3',
-//     name: 'Source Code Versioning',
-//     priority: '1',
-//     description: '	.gitignore files help prevent accidental commits of sensitive, debug, or workstation specific data',
-//     difficulty: 'Easy',
-//     securityFrameworks: ['APRA234', 'CIS8', 'NIST 800-53B', 'SSDF1.1']
-//   },
-//   {
-//     control: '1.4',
-//     name: 'Pre-Commit Hook Scans',
-//     priority: '2',
-//     description: 'A Pre-Commit Hook for security scans provides timely feedback to engineers and helps to prevent vulnerable code being introduced to a repository',
-//     difficulty: 'Easy',
-//     securityFrameworks: [ 'APRA234', 'CIS8', 'NIST 800-53B', 'SSDF1.1', ]
-//   },
-//   {
-//     control: '1.5',
-//     name: 'Commit Signing',
-//     priority: '2',
-//     description: 'Sign all commits to verify that the author is genuine',
-//     difficulty: 'Easy',
-//     securityFrameworks: [ 'APRA234', 'CIS8', 'NIST 800-53B', 'SSDF1.1', ]
-//   },
-//   {
-//     control: '1.6',
-//     name: 'IDE plugins',
-//     priority: '2',
-//     description: 'Most IDEs support the use of third-party plugins, and devs should implement these tools to highlight security issues as they happen in realtime while they are programming.',
-//     difficulty: 'Easy',
-//     securityFrameworks: [ 'APRA234', 'CIS8', 'NIST 800-53B', 'SSDF1.1', ]
-//   },
-// ]
-
+// TODO : Convert 'securityFrameworks' to an array of strings
 const developmentEnvironment = [
     {
         control: "1.1",
@@ -143,7 +93,7 @@ const developmentEnvironment = [
         difficulty: "Medium",
         securityFrameworks: "APRA234, CIS8, ISM GSD, NIST 800-53B, SSDF1.1"
     },
-]
+];
 
 const columnHelper = createColumnHelper()
 
@@ -188,17 +138,20 @@ const columns = [
     header: 'Security Frameworks',
     footer: info => info.column.id,
   }),
-]
+];
+
+
 
 export default function Home() {
   const [data, setData] = useState(() => [...developmentEnvironment])
-  const rerender = useReducer(() => ({}), {})[1]
+
+  // const rerender = useReducer(() => ({}), {})[1]
 
   const table = useReactTable({
     data,
     columns,
     getCoreRowModel: getCoreRowModel(),
-  })
+  });
 
   return (
     <div className={styles.container}>
