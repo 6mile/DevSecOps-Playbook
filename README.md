@@ -1,4 +1,4 @@
-# DevSecOps Playbook - Version 1.3.1 - February 2024
+# DevSecOps Playbook - Version 1.3.2 - December 2024
 This playbook will help you introduce effective DevSecOps practices in your company, regardless of size. We provide explicit guidance and actionable steps to introduce security controls, measure their effectiveness, and demonstrate value for money to your business leaders. Following this playbook will help teams build materially more secure applications, and that in the end, is the intent.
 
 I presented the DevSecOps Playbook at the OWASP Global AppSec Conference in November of 2022.  You can find find a PDF version of the slides presented [here](images/owasp_presentation_globalappsec2022_devsecops_playbook.pdf).
@@ -173,13 +173,13 @@ https://www.cisecurity.org/controls/application-software-security
 It's not the focus of this document, but CIS maintains an amazing set of benchmarks and build playbooks for most operating systems.  I have been using these templates for years and they are a great resource:  https://www.cisecurity.org/cis-benchmarks/
 
 ### Australian ISM 
-The Australian Cyber Security Centre has authored a document called the "Information Security Manual" or ISM as its commonly called.  The landing page for this document is https://www.cyber.gov.au/sites/default/files/2021-12/Information%20Security%20Manual%20%28December%202021%29.pdf.  
+The Australian Cyber Security Centre has authored a document called the "Information Security Manual" or ISM as its commonly called.  The landing page for this document is https://www.cyber.gov.au/resources-business-and-government/essential-cyber-security/ism
 
-This document is large and has a very broad scope.  You can download the complete ISM at https://www.cyber.gov.au/sites/default/files/2021-12/Information%20Security%20Manual%20%28December%202021%29.pdf
+This document is large and has a very broad scope.  You can download the complete ISM at https://www.cyber.gov.au/sites/default/files/2024-12/Information%20Security%20Manual%20%28December%202024%29.pdf
 
 In late 2021 the ACSC released the "Guidelines for Software Development" (GSD).  These are a general set of guidelines for embedding secure coding practices into an organization. These guidelines are far from authoritative and are not very prescriptive with my favorite snippet from the GSD being this little gem: "Platform-specific secure programming practices are used when developing software, including using the lowest privilege needed to achieve a task, checking return values of all system calls, validating all inputs and encrypting all communications."  Is that a catch all or what?!  Wow!  Regardless, I am respectful of the energy that went into this set of guidelines and will continue to try and bring visibility to it as much as I personally can.
 
-You can find the GSD here:  https://www.cyber.gov.au/acsc/view-all-content/advice/guidelines-software-development  
+You can find the GSD here:  https://www.cyber.gov.au/resources-business-and-government/essential-cyber-security/ism/cyber-security-guidelines/guidelines-software-development
 
 ### APRA CPG 234
 The Australian Prudential Regulation Authority (APRA) is part of the Australian government and is charged with regulating the financial sector. It published the "Prudential Practice Guide CPG 234" document in 2019 which outlines high level information security guidelines for regulated entities.
